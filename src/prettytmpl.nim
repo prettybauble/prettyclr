@@ -1,2 +1,4 @@
 # author: Ethosa
-echo "hello, prettybauble 👀"
+
+proc prettyhello* =
+  echo "hello, prettybauble 👀"
