@@ -2,7 +2,7 @@
   
 # prettytmpl
 ### template for prettybauble repositories
-[![tests](https://github.com/prettybauble/prettytmpl/workflows/tests/badge.svg)](https://github.com/Ethosa/nodesnim/actions)
+[![tests](https://github.com/prettybauble/prettytmpl/actions/workflows/test.yml/badge.svg)](https://github.com/prettybauble/prettytmpl/actions/workflows/test.yml)
 
 </div>
 
