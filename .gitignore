@@ -1,3 +1,15 @@
+# main dirs
 nimcache/
 nimblecache/
 htmldocs/
+out/
+
+# bin fies
+*.exe
+
+# logs
+*.log
+*.lg
+
+# database files
+*.db
