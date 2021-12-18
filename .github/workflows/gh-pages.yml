@@ -47,5 +47,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
 
