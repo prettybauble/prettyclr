@@ -46,6 +46,10 @@ jobs:
           sudo sed -i 's/azure\.//' /etc/apt/sources.list
           sudo apt update -yqq
 
+      - name: Install requires
+        run: |
+          nimble install
+
       - name: Build tests
         run: |
           cd tests
