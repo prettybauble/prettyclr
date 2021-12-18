@@ -1,6 +1,6 @@
 import
   prettytmpl,
-  unittests
+  unittest
 
 suite "Suite":
   test "hello":
