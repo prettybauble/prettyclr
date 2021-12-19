@@ -1,18 +1,17 @@
 <div align="center">
   
-# prettytmpl
-### template for prettybauble repositories
-[![tests](https://github.com/prettybauble/prettytmpl/actions/workflows/test.yml/badge.svg)](https://github.com/prettybauble/prettytmpl/actions/workflows/test.yml)
+# prettyclr
+### Small library for working with colors
+[![tests](https://github.com/prettybauble/prettyclr/actions/workflows/test.yml/badge.svg)](https://github.com/prettybauble/prettyclr/actions/workflows/test.yml)
 
-#### Stable version - 0.0.1
+#### Stable version - 1.0.0
 
 </div>
 
 ## Get Started
-Install:
-```bash
-nimble install prettylib
-```
-```bash
-nimble install github.com/prettybauble/prettytmpl
-```
+### Install
+
+-
+  ```bash
+  nimble install github.com/prettybauble/prettyclr
+  ```

@@ -1,8 +1,8 @@
 [Package]
-name = "prettytmpl"
+name = "prettyclr"
 author = "prettybauble"
-version = "0.0.1"
-description = "Template for prettybauble repositories"
+version = "1.0.0"
+description = "Small library for working with colors"
 license = "MIT"
 srcDir = "src"
 
