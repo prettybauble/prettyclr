@@ -41,7 +41,7 @@ jobs:
 
       - name: Install requires
         run: |
-          nimble install
+          nimble install -y
 
       - name: Generate API documents
         run: nimble doc --index:on --project --out:docs --hints:off src/prettytmpl.nim

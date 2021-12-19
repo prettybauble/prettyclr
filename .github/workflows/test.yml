@@ -48,7 +48,7 @@ jobs:
 
       - name: Install requires
         run: |
-          nimble install
+          nimble install -y
 
       - name: Build tests
         run: |
