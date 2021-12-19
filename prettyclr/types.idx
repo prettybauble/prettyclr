@@ -1,0 +1,13 @@
+ColorRef	prettyclr/types.html#ColorRef	types: ColorRef	
+ColorAny	prettyclr/types.html#ColorAny	types: ColorAny	
+ColorObj	prettyclr/types.html#ColorObj	types: ColorObj	
+ColorRgba	prettyclr/types.html#ColorRgba	types: ColorRgba	
+initColor	prettyclr/types.html#initColor	types: initColor(): ColorObj	
+newColor	prettyclr/types.html#newColor	types: newColor(): ColorRef	
+initColor	prettyclr/types.html#initColor,float,float,float	types: initColor(r, g, b: float): ColorObj	
+newColor	prettyclr/types.html#newColor,float,float,float	types: newColor(r, g, b: float): ColorRef	
+initColor	prettyclr/types.html#initColor,float,float,float,float	types: initColor(r, g, b, a: float): ColorObj	
+newColor	prettyclr/types.html#newColor,float,float,float,float	types: newColor(r, g, b, a: float): ColorRef	
+Color	prettyclr/types.html#Color	types: Color(): ColorObj	
+Color	prettyclr/types.html#Color,uint8,uint8,uint8,uint8	types: Color(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj	
+Color	prettyclr/types.html#Color,float,float,float,float	types: Color(r, g, b: float; a: float = 1.0&apos;f32): ColorObj	
