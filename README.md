@@ -13,5 +13,20 @@
 
 -
   ```bash
+  nimble install prettyclr
+  ```
+-
+  ```bash
   nimble install github.com/prettybauble/prettyclr
   ```
+
+
+<div align="center">
+
+|[Docs][]|[Tests][]|
+|--------|---------|
+
+</div>
+
+[Docs]:https://prettybauble.github.io/prettyclr/theindex.html
+[Tests]:https://github.com/prettybauble/prettyclr/tree/main/tests
