@@ -1,0 +1,21 @@
+normalize	prettyclr/clr/clr_math.html#normalize,ColorAny	clr_math: normalize(clr: ColorAny): ColorObj	
+mix	prettyclr/clr/clr_math.html#mix,ColorAny,ColorAny,float	clr_math: mix(clr1, clr2: ColorAny; fraction: float = 0.5): ColorObj	
+max	prettyclr/clr/clr_math.html#max,ColorAny,ColorAny	clr_math: max(clr1, clr2: ColorAny): ColorObj	
+min	prettyclr/clr/clr_math.html#min,ColorAny,ColorAny	clr_math: min(clr1, clr2: ColorAny): ColorObj	
+abs	prettyclr/clr/clr_math.html#abs,ColorAny	clr_math: abs(clr: ColorAny): ColorObj	
+sqrt	prettyclr/clr/clr_math.html#sqrt,ColorAny	clr_math: sqrt(clr: ColorAny): ColorObj	
+pow	prettyclr/clr/clr_math.html#pow,ColorAny,float	clr_math: pow(clr: ColorAny; power: float): ColorObj	
+bright	prettyclr/clr/clr_math.html#bright,ColorAny	clr_math: bright(clr: ColorAny): float	
+`==`	prettyclr/clr/clr_math.html#==,ColorAny,ColorAny	clr_math: `==`(clr1, clr2: ColorAny): bool	
+`+`	prettyclr/clr/clr_math.html#+,ColorAny,ColorAny	clr_math: `+`(clr1, clr2: ColorAny): ColorObj	
+`-`	prettyclr/clr/clr_math.html#-,ColorAny,ColorAny	clr_math: `-`(clr1, clr2: ColorAny): ColorObj	
+`/`	prettyclr/clr/clr_math.html#/,ColorAny,ColorAny	clr_math: `/`(clr1, clr2: ColorAny): ColorObj	
+`*`	prettyclr/clr/clr_math.html#*,ColorAny,ColorAny	clr_math: `*`(clr1, clr2: ColorAny): ColorObj	
+`+`	prettyclr/clr/clr_math.html#+,ColorAny,float	clr_math: `+`(clr: ColorAny; v: float): ColorObj	
+`-`	prettyclr/clr/clr_math.html#-,ColorAny,float	clr_math: `-`(clr: ColorAny; v: float): ColorObj	
+`/`	prettyclr/clr/clr_math.html#/,ColorAny,float	clr_math: `/`(clr: ColorAny; v: float): ColorObj	
+`*`	prettyclr/clr/clr_math.html#*,ColorAny,float	clr_math: `*`(clr: ColorAny; v: float): ColorObj	
+`+`	prettyclr/clr/clr_math.html#+,float,ColorAny	clr_math: `+`(v: float; clr: ColorAny): ColorObj	
+`-`	prettyclr/clr/clr_math.html#-,float,ColorAny	clr_math: `-`(v: float; clr: ColorAny): ColorObj	
+`/`	prettyclr/clr/clr_math.html#/,float,ColorAny	clr_math: `/`(v: float; clr: ColorAny): ColorObj	
+`*`	prettyclr/clr/clr_math.html#*,float,ColorAny	clr_math: `*`(v: float; clr: ColorAny): ColorObj	

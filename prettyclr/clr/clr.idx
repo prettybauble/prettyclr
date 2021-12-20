@@ -1,0 +1,5 @@
+parseColor	prettyclr/clr/clr.html#parseColor,SomeSignedInt	clr: parseColor(src: SomeSignedInt): ColorObj	
+parseColor	prettyclr/clr/clr.html#parseColor,string	clr: parseColor(src: string): ColorObj	
+toFloat	prettyclr/clr/clr.html#toFloat,ColorRgba	clr: toFloat(color: ColorRgba): ColorObj	
+toInt	prettyclr/clr/clr.html#toInt,ColorAny	clr: toInt(color: ColorAny): ColorRgba	
+blend	prettyclr/clr/clr.html#blend,ColorAny,ColorAny,BlendMode	clr: blend(clr1, clr2: ColorAny; mode: BlendMode = bmNormal): ColorObj	
