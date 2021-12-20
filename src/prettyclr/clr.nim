@@ -63,9 +63,7 @@ proc parseColor*(src: string): ColorObj =
 
   if src in color_list:
     let clr = color_list[src]
-    return initColor(
-      int(clr[0]) / 255, int(clr[1]) / 255,
-      int(clr[2]) / 255, int(clr[3]) / 255)
+    return initColor(clr[0] / 255, clr[1] / 255, clr[2] / 255, 1f)
 
   raise newException(ColorStringParseError, src & " isn't color!")
 

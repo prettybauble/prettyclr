@@ -1,7 +1,7 @@
 [Package]
 name = "prettyclr"
 author = "prettybauble"
-version = "1.0.0"
+version = "1.0.1"
 description = "Small library for working with colors"
 license = "MIT"
 srcDir = "src"
