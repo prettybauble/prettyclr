@@ -148,8 +148,10 @@ function main() {
 
   </ul>
   <ul class="simple nested-toc-section">mix
-      <li><a class="reference" href="#mix%2CColorAny%2CColorAny%2Cfloat"
-    title="mix(clr1, clr2: ColorAny; fraction: float = 0.5): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny,<wbr>float</a></li>
+      <li><a class="reference" href="#mix%2CColorAny%2CColorAny"
+    title="mix(clr1, clr2: ColorAny): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny</a></li>
+  <li><a class="reference" href="#mix%2CColorAny%2CColorAny%2Cfloat"
+    title="mix(clr1, clr2: ColorAny; fraction: float): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny,<wbr>float</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">abs
@@ -207,8 +209,15 @@ function main() {
 Normalizes Color object.
 
 </dd>
+<a id="mix,ColorAny,ColorAny"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dd>
+
+Mixes two colors
+
+</dd>
 <a id="mix,ColorAny,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny%2Cfloat"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">fraction</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="FloatNumber">0.5</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny%2Cfloat"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">fraction</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
 <dd>
 
 Mixes two colors
@@ -357,7 +366,7 @@ Returns color bright
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-20 11:45:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-21 15:17:27 UTC</small>
       </div>
     </div>
   </div>

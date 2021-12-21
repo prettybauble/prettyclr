@@ -1,5 +1,6 @@
 normalize	prettyclr/clr/clr_math.html#normalize,ColorAny	clr_math: normalize(clr: ColorAny): ColorObj	
-mix	prettyclr/clr/clr_math.html#mix,ColorAny,ColorAny,float	clr_math: mix(clr1, clr2: ColorAny; fraction: float = 0.5): ColorObj	
+mix	prettyclr/clr/clr_math.html#mix,ColorAny,ColorAny	clr_math: mix(clr1, clr2: ColorAny): ColorObj	
+mix	prettyclr/clr/clr_math.html#mix,ColorAny,ColorAny,float	clr_math: mix(clr1, clr2: ColorAny; fraction: float): ColorObj	
 max	prettyclr/clr/clr_math.html#max,ColorAny,ColorAny	clr_math: max(clr1, clr2: ColorAny): ColorObj	
 min	prettyclr/clr/clr_math.html#min,ColorAny,ColorAny	clr_math: min(clr1, clr2: ColorAny): ColorObj	
 abs	prettyclr/clr/clr_math.html#abs,ColorAny	clr_math: abs(clr: ColorAny): ColorObj	
