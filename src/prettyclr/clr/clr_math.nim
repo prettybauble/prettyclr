@@ -12,7 +12,16 @@ func normalize*(clr: ColorAny): ColorObj =
   result.b = if result.b > 1f: 1f elif result.b < 0f: 0f else: result.b
   result.a = if result.a > 1f: 1f elif result.a < 0f: 0f else: result.a
 
-func mix*(clr1, clr2: ColorAny, fraction: float = 0.5): ColorObj =
+func mix*(clr1, clr2: ColorAny): ColorObj =
+  ## Mixes two colors
+  let
+    r = (clr2.r - clr1.r) * clr.a + clr1.r
+    g = (clr2.g - clr1.g) * clr.a + clr1.g
+    b = (clr2.b - clr1.b) * clr.a + clr1.b
+    a = (clr2.a - clr1.a) * clr.a + clr1.a
+  Color(r, g, b, a)
+
+func mix*(clr1, clr2: ColorAny, fraction: float): ColorObj =
   ## Mixes two colors
   let
     r = (clr2.r - clr1.r) * fraction + clr1.r
