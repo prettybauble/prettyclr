@@ -104,13 +104,23 @@ function main() {
   <li><a class="reference" href="#ColorRgba"
     title="ColorRgba = object
   r*, g*, b*, a*: uint8">ColorRgba</a></li>
+  <li><a class="reference" href="#ColorHsv"
+    title="ColorHsv = object
+  h*: 0 .. 360
+  s*, v*: float">ColorHsv</a></li>
 
   </ul>
 </li>
 <li>
   <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">newColor
+      <ul class="simple nested-toc-section">hsv
+      <li><a class="reference" href="#hsv%2C%2Cfloat32%2Cfloat32"
+    title="hsv(h: 0 .. 360; s: 0.0&apos;f32 .. 1.0&apos;f32 = 1.0&apos;f32;
+    v: 0.0&apos;f32 .. 1.0&apos;f32 = 1.0&apos;f32): ColorHsv">hsv,<wbr>,<wbr>float32,<wbr>float32</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">newColor
       <li><a class="reference" href="#newColor"
     title="newColor(): ColorRef">newColor</a></li>
   <li><a class="reference" href="#newColor%2Cfloat%2Cfloat%2Cfloat"
@@ -177,6 +187,16 @@ function main() {
 <a id="ColorRgba"></a>
 <dt><pre><a href="types.html#ColorRgba"><span class="Identifier">ColorRgba</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">r</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">g</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint8</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="ColorHsv"></a>
+<dt><pre><a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">h</span><span class="Operator">*</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">360</span>
+  <span class="Identifier">s</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">v</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
 </pre></dt>
 <dd>
 
@@ -253,6 +273,15 @@ Creates the new transparent color (0, 0, 0, 0)
 
 
 </dd>
+<a id="hsv,,float32,float32"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#hsv%2C%2Cfloat32%2Cfloat32"><span class="Identifier">hsv</span></a><span class="Other">(</span><span class="Identifier">h</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">360</span><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <span class="FloatNumber">0.0'f32</span> <span class="Operator">..</span> <span class="FloatNumber">1.0'f32</span> <span class="Other">=</span> <span class="FloatNumber">1.0'f32</span><span class="Other">;</span>
+         <span class="Identifier">v</span><span class="Other">:</span> <span class="FloatNumber">0.0'f32</span> <span class="Operator">..</span> <span class="FloatNumber">1.0'f32</span> <span class="Other">=</span> <span class="FloatNumber">1.0'f32</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Creates a new color in HSV color model.
+
+</dd>
 
 </dl></div>
 
@@ -263,7 +292,7 @@ Creates the new transparent color (0, 0, 0, 0)
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-21 15:17:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-20 17:29:59 UTC</small>
       </div>
     </div>
   </div>

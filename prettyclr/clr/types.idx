@@ -2,6 +2,7 @@ ColorRef	prettyclr/clr/types.html#ColorRef	types: ColorRef
 ColorAny	prettyclr/clr/types.html#ColorAny	types: ColorAny	
 ColorObj	prettyclr/clr/types.html#ColorObj	types: ColorObj	
 ColorRgba	prettyclr/clr/types.html#ColorRgba	types: ColorRgba	
+ColorHsv	prettyclr/clr/types.html#ColorHsv	types: ColorHsv	
 initColor	prettyclr/clr/types.html#initColor	types: initColor(): ColorObj	
 newColor	prettyclr/clr/types.html#newColor	types: newColor(): ColorRef	
 initColor	prettyclr/clr/types.html#initColor,float,float,float	types: initColor(r, g, b: float): ColorObj	
@@ -11,3 +12,4 @@ newColor	prettyclr/clr/types.html#newColor,float,float,float,float	types: newCol
 Color	prettyclr/clr/types.html#Color	types: Color(): ColorObj	
 Color	prettyclr/clr/types.html#Color,uint8,uint8,uint8,uint8	types: Color(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj	
 Color	prettyclr/clr/types.html#Color,float,float,float,float	types: Color(r, g, b: float; a: float = 1.0&apos;f32): ColorObj	
+hsv	prettyclr/clr/types.html#hsv,,float32,float32	types: hsv(h: 0 .. 360; s: 0.0&apos;f32 .. 1.0&apos;f32 = 1.0&apos;f32;\n    v: 0.0&apos;f32 .. 1.0&apos;f32 = 1.0&apos;f32): ColorHsv	

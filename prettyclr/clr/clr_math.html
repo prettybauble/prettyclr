@@ -147,11 +147,16 @@ function main() {
     title="normalize(clr: ColorAny): ColorObj">normalize,<wbr>ColorAny</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">blend
+      <li><a class="reference" href="#blend%2CColorAny%2CColorAny%2CBlendMode"
+    title="blend(clr1, clr2: ColorAny; mode: BlendMode = bmNormal): ColorObj">blend,<wbr>ColorAny,<wbr>ColorAny,<wbr>BlendMode</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">mix
       <li><a class="reference" href="#mix%2CColorAny%2CColorAny"
     title="mix(clr1, clr2: ColorAny): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny</a></li>
-  <li><a class="reference" href="#mix%2CColorAny%2CColorAny%2Cfloat"
-    title="mix(clr1, clr2: ColorAny; fraction: float): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny,<wbr>float</a></li>
+  <li><a class="reference" href="#mix%2CColorAny%2CColorAny%2C"
+    title="mix(clr1, clr2: ColorAny; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj">mix,<wbr>ColorAny,<wbr>ColorAny,<wbr></a></li>
 
   </ul>
   <ul class="simple nested-toc-section">abs
@@ -197,160 +202,167 @@ function main() {
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="types.html">types</a>
+<a class="reference external" href="../core/enums.html">../core/enums</a>, <a class="reference external" href="types.html">types</a>
 </dl></div>
 <div class="section" id="13">
 <h1><a class="toc-backref" href="#13">Funcs</a></h1>
 <dl class="item">
 <a id="normalize,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#normalize%2CColorAny"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#normalize%2CColorAny"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Normalizes Color object.
 
 </dd>
 <a id="mix,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Mixes two colors
 
 </dd>
-<a id="mix,ColorAny,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny%2Cfloat"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">fraction</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<a id="mix,ColorAny,ColorAny,"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#mix%2CColorAny%2CColorAny%2C"><span class="Identifier">mix</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">fraction</span><span class="Other">:</span> <span class="FloatNumber">0.0'f32</span> <span class="Operator">..</span> <span class="FloatNumber">1.0'f32</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Mixes two colors
 
 </dd>
 <a id="max,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#max%2CColorAny%2CColorAny"><span class="Identifier">max</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#max%2CColorAny%2CColorAny"><span class="Identifier">max</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns minimal color.
 
 </dd>
 <a id="min,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#min%2CColorAny%2CColorAny"><span class="Identifier">min</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#min%2CColorAny%2CColorAny"><span class="Identifier">min</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns minimal color.
 
 </dd>
 <a id="abs,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#abs%2CColorAny"><span class="Identifier">abs</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#abs%2CColorAny"><span class="Identifier">abs</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns positivie color.
 
 </dd>
 <a id="sqrt,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#sqrt%2CColorAny"><span class="Identifier">sqrt</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#sqrt%2CColorAny"><span class="Identifier">sqrt</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns positivie color.
 
 </dd>
 <a id="pow,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#pow%2CColorAny%2Cfloat"><span class="Identifier">pow</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">power</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#pow%2CColorAny%2Cfloat"><span class="Identifier">pow</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">power</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns positivie color.
 
 </dd>
 <a id="bright,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#bright%2CColorAny"><span class="Identifier">bright</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#bright%2CColorAny"><span class="Identifier">bright</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns color bright
 
 </dd>
+<a id="blend,ColorAny,ColorAny,BlendMode"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#blend%2CColorAny%2CColorAny%2CBlendMode"><span class="Identifier">blend</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="../core/enums.html#BlendMode"><span class="Identifier">BlendMode</span></a> <span class="Other">=</span> <span class="Identifier">bmNormal</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Blends two colors.
+
+</dd>
 <a id="==,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%3D%3D%2CColorAny%2CColorAny"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%3D%3D%2CColorAny%2CColorAny"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="+,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2B%2CColorAny%2CColorAny"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2B%2CColorAny%2CColorAny"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="-,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#-%2CColorAny%2CColorAny"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#-%2CColorAny%2CColorAny"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="/,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2F%2CColorAny%2CColorAny"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2F%2CColorAny%2CColorAny"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="*,ColorAny,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2A%2CColorAny%2CColorAny"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2A%2CColorAny%2CColorAny"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">clr1</span><span class="Other">,</span> <span class="Identifier">clr2</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="+,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2B%2CColorAny%2Cfloat"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2B%2CColorAny%2Cfloat"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="-,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#-%2CColorAny%2Cfloat"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#-%2CColorAny%2Cfloat"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="/,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2F%2CColorAny%2Cfloat"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2F%2CColorAny%2Cfloat"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="*,ColorAny,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2A%2CColorAny%2Cfloat"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2A%2CColorAny%2Cfloat"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="+,float,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2B%2Cfloat%2CColorAny"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2B%2Cfloat%2CColorAny"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="-,float,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#-%2Cfloat%2CColorAny"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#-%2Cfloat%2CColorAny"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="/,float,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2F%2Cfloat%2CColorAny"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2F%2Cfloat%2CColorAny"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="*,float,ColorAny"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%2A%2Cfloat%2CColorAny"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%2A%2Cfloat%2CColorAny"><span class="Identifier">`*`</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorAny"><span class="Identifier">ColorAny</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -366,7 +378,7 @@ Returns color bright
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-21 15:17:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-20 17:29:59 UTC</small>
       </div>
     </div>
   </div>
