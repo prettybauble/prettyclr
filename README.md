@@ -4,7 +4,7 @@
 ### Small library for working with colors
 [![tests](https://github.com/prettybauble/prettyclr/actions/workflows/test.yml/badge.svg)](https://github.com/prettybauble/prettyclr/actions/workflows/test.yml)
 
-#### Stable version - 1.0.2
+#### Stable version - 1.0.3
 
 </div>
 

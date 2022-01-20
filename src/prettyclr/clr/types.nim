@@ -7,6 +7,9 @@ type
     r*, g*, b*, a*: float
   ColorRgba* = object
     r*, g*, b*, a*: uint8
+  ColorHsv* = object
+    h*: 0..360
+    s*, v*: float
 
 
 {.push inline.}
@@ -46,5 +49,9 @@ func Color*(r, g, b: uint8, a: uint8 = 255u8): ColorObj =
 
 func Color*(r, g, b: float, a: float = 1f): ColorObj =
   initColor(r, g, b, a)
+
+func hsv*(h: 0..360, s: 0f..1f = 1f, v: 0f..1f = 1f): ColorHsv =
+  ## Creates a new color in HSV color model.
+  ColorHsv(h: h, s: s, v: v)
 
 {.pop.}

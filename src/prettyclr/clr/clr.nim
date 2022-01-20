@@ -1,7 +1,7 @@
 # author: Ethosa
 import
   ../core/exceptions,
-  ../core/enums,
+  patterns,
   clr_list,
   strutils,
   clr_math,
@@ -9,16 +9,6 @@ import
   types,
   re
 
-
-let
-  HEX_COLOR_PATTERN = re(
-    "\\A(#|0x)([0-9a-f]{3,6})\\Z",
-    {reStudy, reIgnoreCase}
-  )
-  RGBA_COLOR_PATTERN = re(
-    "\\Argba{0,1}\\s*\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,{0,1}\\s*(\\d*)\\s*\\)\\Z",
-    {reStudy, reIgnoreCase}
-  )
 
 
 {.push inline.}
@@ -73,45 +63,37 @@ func toFloat*(color: ColorRgba): ColorObj =
     float(color.r) / 255, float(color.g) / 255,
     float(color.b) / 255, float(color.a) / 255)
 
-func toInt*(color: ColorAny): ColorRgba =
+func toRgba*(color: ColorAny): ColorRgba =
   ## Converts color object to float color object.
   ColorRgba(
     r: uint8(color.r * 255), g: uint8(color.g * 255),
     b: uint8(color.b * 255), a: uint8(color.a * 255))
 
-
-func blend*(clr1, clr2: ColorAny, mode: BlendMode = bmNormal): ColorObj =
-  ## Blends two colors.
-  case mode
-  of bmNormal:
-    mix(clr1, clr2)
-  of bmMultiply:
-    clr1*clr2
-  of bmAddition:
-    clr1+clr2
-  of bmSubtract:
-    clr1-clr2
-  of bmDivide:
-    clr1/clr2
-  of bmDifference:
-    abs(clr1-clr2)
-  of bmDarkenOnly:
-    min(clr1,clr2)
-  of bmLightenOnly:
-    max(clr1,clr2)
-  of bmScreen:
-    1f - (1f - clr1)*(1f - clr2)
-  of bmHardLight:
-    (clr1*clr2) * (1f - (1f - clr1)*(1f - clr2))
-  of bmOverlay:
-    if bright(clr1) < 0.5:
-      2f*clr1*clr2
-    else:
-      1f - 2f*(1f - clr1)*(1f - clr2)
-  of bmSoftLight:
-    if bright(clr1) < 0.5:
-      normalize(2f*clr1*clr2 + pow(clr1, 2f)*(1f - 2f*clr2))
-    else:
-      normalize(2f*clr1*(1f - clr2) + sqrt(clr1)*(2f*clr2 - 1f))
+func rgba2hsv*(clr: ColorAny): ColorHsv =
+  ## Converts RGBA color model to HSV color model.
+  ## https://en.wikipedia.org/wiki/HSV_color_space
+  let
+    max_rgba = max(max(clr.r, clr.b), clr.g)
+    min_rgba = min(min(clr.r, clr.b), clr.g)
+    h: 0..360 =
+      if max_rgba == min_rgba:
+        0
+      elif max_rgba == clr.r and clr.g >= clr.b:
+        int(60 * ((clr.g - clr.b) / (max_rgba - min_rgba)))
+      elif max_rgba == clr.r and clr.g < clr.b:
+        int(60 * ((clr.g - clr.b) / (max_rgba - min_rgba)) + 360)
+      elif max_rgba == clr.g:
+        int(60 * ((clr.b - clr.r) / (max_rgba - min_rgba)) + 120)
+      elif max_rgba == clr.b:
+        int(60 * ((clr.r - clr.g) / (max_rgba - min_rgba)) + 240)
+      else:
+        0
+    s =
+      if max_rgba == 0:
+        0f
+      else:
+        1f - min_rgba/max_rgba
+    v = max_rgba
+  ColorHsv(h: h, s: s, v: v)
 
 {.pop.}

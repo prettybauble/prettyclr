@@ -18,7 +18,7 @@ suite "Working with colors":
     echo mix(color1, color2, 0.25)
 
   test "rgba float color to rgba int color":
-    echo Color(50, 100, 150, 255).toInt()
+    echo Color(50, 100, 150, 255).toRgba()
 
   test "parseColor":
     assert Color(255, 100, 150) == parseColor("rgb(255, 100, 150)")
@@ -58,3 +58,9 @@ suite "Working with colors":
 
   test "lighten only blend":
     assert blend(clr1, clr2, bmLightenOnly) == Color(1f, 1f, 1f, 1f)
+
+  test "rgba to hsv color model":
+    var
+      rgba_clr = Color(1f, 0.5, 0.25)
+      hsv_clr = rgba2hsv(rgba_clr)
+    echo hsv_clr
