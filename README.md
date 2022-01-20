@@ -8,6 +8,15 @@
 
 </div>
 
+## Features
+- Color blending support
+- Parsing colors from strings (`"#C0FFEE"` like) and numbers (0xC0FFEE like). also CSS-like supports: `"rgb(255, 250, 200)"`
+- Working with color models
+  [x] - RGBA -> float
+  [x] - float -> RGBA
+  [x] - float -> HSV
+  [ ] - HSV -> float
+
 ## Get Started
 ### Install
 
