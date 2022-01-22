@@ -1,0 +1,28 @@
+normalize	prettyclr/clr/basic.html#normalize,ColorObj	basic: normalize(clr: ColorObj): ColorObj	
+mix	prettyclr/clr/basic.html#mix,ColorObj,ColorObj	basic: mix(clr1, clr2: ColorObj): ColorObj	
+mix	prettyclr/clr/basic.html#mix,ColorObj,ColorObj,	basic: mix(clr1, clr2: ColorObj; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj	
+max	prettyclr/clr/basic.html#max,ColorObj,ColorObj	basic: max(clr1, clr2: ColorObj): ColorObj	
+min	prettyclr/clr/basic.html#min,ColorObj,ColorObj	basic: min(clr1, clr2: ColorObj): ColorObj	
+abs	prettyclr/clr/basic.html#abs,ColorObj	basic: abs(clr: ColorObj): ColorObj	
+sqrt	prettyclr/clr/basic.html#sqrt,ColorObj	basic: sqrt(clr: ColorObj): ColorObj	
+pow	prettyclr/clr/basic.html#pow,ColorObj,float	basic: pow(clr: ColorObj; power: float): ColorObj	
+bright	prettyclr/clr/basic.html#bright,ColorObj	basic: bright(clr: ColorObj): float	
+`==`	prettyclr/clr/basic.html#==,ColorObj,ColorObj	basic: `==`(clr1, clr2: ColorObj): bool	
+`+`	prettyclr/clr/basic.html#+,ColorObj,ColorObj	basic: `+`(clr1, clr2: ColorObj): ColorObj	
+`-`	prettyclr/clr/basic.html#-,ColorObj,ColorObj	basic: `-`(clr1, clr2: ColorObj): ColorObj	
+`/`	prettyclr/clr/basic.html#/,ColorObj,ColorObj	basic: `/`(clr1, clr2: ColorObj): ColorObj	
+`*`	prettyclr/clr/basic.html#*,ColorObj,ColorObj	basic: `*`(clr1, clr2: ColorObj): ColorObj	
+`+`	prettyclr/clr/basic.html#+,ColorObj,float	basic: `+`(clr: ColorObj; v: float): ColorObj	
+`-`	prettyclr/clr/basic.html#-,ColorObj,float	basic: `-`(clr: ColorObj; v: float): ColorObj	
+`/`	prettyclr/clr/basic.html#/,ColorObj,float	basic: `/`(clr: ColorObj; v: float): ColorObj	
+`*`	prettyclr/clr/basic.html#*,ColorObj,float	basic: `*`(clr: ColorObj; v: float): ColorObj	
+`+`	prettyclr/clr/basic.html#+,float,ColorObj	basic: `+`(v: float; clr: ColorObj): ColorObj	
+`-`	prettyclr/clr/basic.html#-,float,ColorObj	basic: `-`(v: float; clr: ColorObj): ColorObj	
+`/`	prettyclr/clr/basic.html#/,float,ColorObj	basic: `/`(v: float; clr: ColorObj): ColorObj	
+`*`	prettyclr/clr/basic.html#*,float,ColorObj	basic: `*`(v: float; clr: ColorObj): ColorObj	
+`+=`	prettyclr/clr/basic.html#+=,ColorObj,	basic: `+=`(clr: var ColorObj; v: float | ColorObj)	
+`-=`	prettyclr/clr/basic.html#-=,ColorObj,	basic: `-=`(clr: var ColorObj; v: float | ColorObj)	
+`/=`	prettyclr/clr/basic.html#/=,ColorObj,	basic: `/=`(clr: var ColorObj; v: float | ColorObj)	
+`*=`	prettyclr/clr/basic.html#*=,ColorObj,	basic: `*=`(clr: var ColorObj; v: float | ColorObj)	
+`$`	prettyclr/clr/basic.html#$,ColorObj	basic: `$`(clr: ColorObj): string	
+blend	prettyclr/clr/basic.html#blend,ColorObj,ColorObj,BlendMode	basic: blend(clr1, clr2: ColorObj; mode: BlendMode = bmNormal): ColorObj	

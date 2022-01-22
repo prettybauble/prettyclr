@@ -1,5 +1,0 @@
-parseColor	prettyclr/clr/clr.html#parseColor,SomeSignedInt	clr: parseColor(src: SomeSignedInt): ColorObj	
-parseColor	prettyclr/clr/clr.html#parseColor,string	clr: parseColor(src: string): ColorObj	
-toFloat	prettyclr/clr/clr.html#toFloat,ColorRgba	clr: toFloat(color: ColorRgba): ColorObj	
-toRgba	prettyclr/clr/clr.html#toRgba,ColorAny	clr: toRgba(color: ColorAny): ColorRgba	
-rgba2hsv	prettyclr/clr/clr.html#rgba2hsv,ColorAny	clr: rgba2hsv(clr: ColorAny): ColorHsv	

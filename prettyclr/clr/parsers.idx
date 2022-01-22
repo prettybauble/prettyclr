@@ -1,0 +1,2 @@
+parseclr	prettyclr/clr/parsers.html#parseclr,SomeSignedInt	parsers: parseclr(src: SomeSignedInt): ColorObj	
+parseclr	prettyclr/clr/parsers.html#parseclr,string	parsers: parseclr(src: string): ColorObj	

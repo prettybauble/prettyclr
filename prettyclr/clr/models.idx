@@ -1,0 +1,2 @@
+rgba2hsl	prettyclr/clr/models.html#rgba2hsl,ColorObj,HslMode	models: rgba2hsl(clr: ColorObj; kind: HslMode = hmLargest): ColorHsl	
+hsl2rgba	prettyclr/clr/models.html#hsl2rgba,ColorHsl	models: hsl2rgba(clr: ColorHsl): ColorObj	

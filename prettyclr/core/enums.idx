@@ -1,1 +1,18 @@
+bmNormal	prettyclr/core/enums.html#bmNormal	BlendMode.bmNormal	
+bmMultiply	prettyclr/core/enums.html#bmMultiply	BlendMode.bmMultiply	
+bmScreen	prettyclr/core/enums.html#bmScreen	BlendMode.bmScreen	
+bmHardLight	prettyclr/core/enums.html#bmHardLight	BlendMode.bmHardLight	
+bmOverlay	prettyclr/core/enums.html#bmOverlay	BlendMode.bmOverlay	
+bmSoftLight	prettyclr/core/enums.html#bmSoftLight	BlendMode.bmSoftLight	
+bmDivide	prettyclr/core/enums.html#bmDivide	BlendMode.bmDivide	
+bmAddition	prettyclr/core/enums.html#bmAddition	BlendMode.bmAddition	
+bmSubtract	prettyclr/core/enums.html#bmSubtract	BlendMode.bmSubtract	
+bmDifference	prettyclr/core/enums.html#bmDifference	BlendMode.bmDifference	
+bmDarkenOnly	prettyclr/core/enums.html#bmDarkenOnly	BlendMode.bmDarkenOnly	
+bmLightenOnly	prettyclr/core/enums.html#bmLightenOnly	BlendMode.bmLightenOnly	
 BlendMode	prettyclr/core/enums.html#BlendMode	enums: BlendMode	
+hmIntensity	prettyclr/core/enums.html#hmIntensity	HslMode.hmIntensity	
+hmLargest	prettyclr/core/enums.html#hmLargest	HslMode.hmLargest	
+hmLightness	prettyclr/core/enums.html#hmLightness	HslMode.hmLightness	
+hmLuma	prettyclr/core/enums.html#hmLuma	HslMode.hmLuma	
+HslMode	prettyclr/core/enums.html#HslMode	enums: HslMode	

@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>prettyclr/core/enums</title>
+<title>prettyclr/clr/models</title>
 <link rel="stylesheet" type="text/css" href="../../nimdoc.out.css">
 
 <script type="text/javascript" src="../../dochack.js"></script>
@@ -62,7 +62,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">prettyclr/core/enums</h1>
+    <h1 class="title">prettyclr/clr/models</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -92,15 +92,24 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
-  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
+  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#BlendMode"
-    title="BlendMode = enum
-  bmNormal, bmMultiply, bmScreen, bmHardLight, bmOverlay, bmSoftLight, bmDivide,
-  bmAddition, bmSubtract, bmDifference, bmDarkenOnly, bmLightenOnly">BlendMode</a></li>
-  <li><a class="reference" href="#HslMode"
-    title="HslMode = enum
-  hmIntensity, hmLargest, hmLightness, hmLuma">HslMode</a></li>
+    
+  </ul>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
+  <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">hsl2rgba
+      <li><a class="reference" href="#hsl2rgba%2CColorHsl"
+    title="hsl2rgba(clr: ColorHsl): ColorObj">hsl2rgba,<wbr>ColorHsl</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">rgba2hsl
+      <li><a class="reference" href="#rgba2hsl%2CColorObj%2CHslMode"
+    title="rgba2hsl(clr: ColorObj; kind: HslMode = hmLargest): ColorHsl">rgba2hsl,<wbr>ColorObj,<wbr>HslMode</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -112,24 +121,27 @@ function main() {
   <div id="tocRoot"></div>
   
   <p class="module-desc"></p>
-  <div class="section" id="7">
-<h1><a class="toc-backref" href="#7">Types</a></h1>
+  <div class="section" id="6">
+<h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a id="BlendMode"></a>
-<dt><pre><a href="enums.html#BlendMode"><span class="Identifier">BlendMode</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">bmNormal</span><span class="Other">,</span> <span class="Identifier">bmMultiply</span><span class="Other">,</span> <span class="Identifier">bmScreen</span><span class="Other">,</span> <span class="Identifier">bmHardLight</span><span class="Other">,</span> <span class="Identifier">bmOverlay</span><span class="Other">,</span> <span class="Identifier">bmSoftLight</span><span class="Other">,</span> <span class="Identifier">bmDivide</span><span class="Other">,</span>
-  <span class="Identifier">bmAddition</span><span class="Other">,</span> <span class="Identifier">bmSubtract</span><span class="Other">,</span> <span class="Identifier">bmDifference</span><span class="Other">,</span> <span class="Identifier">bmDarkenOnly</span><span class="Other">,</span> <span class="Identifier">bmLightenOnly</span></pre></dt>
+<a class="reference external" href="../core/enums.html">../core/enums</a>, <a class="reference external" href="types.html">types</a>
+</dl></div>
+<div class="section" id="13">
+<h1><a class="toc-backref" href="#13">Funcs</a></h1>
+<dl class="item">
+<a id="rgba2hsl,ColorObj,HslMode"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#rgba2hsl%2CColorObj%2CHslMode"><span class="Identifier">rgba2hsl</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">;</span> <span class="Identifier">kind</span><span class="Other">:</span> <a href="../core/enums.html#HslMode"><span class="Identifier">HslMode</span></a> <span class="Other">=</span> <span class="Identifier">hmLargest</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsl"><span class="Identifier">ColorHsl</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Converts RGBA color model to HSV color model. <a class="reference external" href="https://en.wikipedia.org/wiki/HSV_color_space">https://en.wikipedia.org/wiki/HSV_color_space</a>
 
 </dd>
-<a id="HslMode"></a>
-<dt><pre><a href="enums.html#HslMode"><span class="Identifier">HslMode</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">hmIntensity</span><span class="Other">,</span> <span class="Identifier">hmLargest</span><span class="Other">,</span> <span class="Identifier">hmLightness</span><span class="Other">,</span> <span class="Identifier">hmLuma</span></pre></dt>
+<a id="hsl2rgba,ColorHsl"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#hsl2rgba%2CColorHsl"><span class="Identifier">hsl2rgba</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsl"><span class="Identifier">ColorHsl</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Converts HSL color model to RGBA.
 
 </dd>
 
