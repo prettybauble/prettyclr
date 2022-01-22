@@ -1,7 +1,8 @@
 import
-  clr/types,
-  clr/clr_math,
-  clr/clr
+  clr/types,  # basic color types
+  clr/basic,  # basic color mathematic
+  clr/parsers,  # provides color parser
+  clr/models  # color models
 
 export
-  types, clr_math, clr
+  types, basic, parsers, models
