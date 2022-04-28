@@ -12,9 +12,8 @@
 - Color blending support
 - Parsing colors from strings (`"#C0FFEE"` like) and numbers (0xC0FFEE like). also CSS-like supports: `"rgb(255, 250, 200)"`
 - Working with color models:
-  - [x] RGBA (as int and as float)
-  - [x] HSV (0..360, 0f..1f, 0f..1f)
-  - [x] HSL (0..360, 0f..1f, 0f..1f)
+  - [x] RGBA (0f..1f)
+  - [x] HSL (supports Y, L, V and I) (0..360, 0f..1f, 0f..1f)
 
 ## Get Started
 ### Install

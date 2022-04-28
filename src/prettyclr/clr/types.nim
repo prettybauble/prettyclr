@@ -7,9 +7,7 @@ type
     r*, g*, b*, a*: float
   ColorHsl* = object
     kind*: HslMode
-    h*: range[0..360]
-    s*: float
-    l*: float
+    h*, s*, l*: float
 
 
 {.push inline.}
@@ -36,7 +34,12 @@ func clr*(r, g, b: uint8, a: uint8 = 255u8): ColorObj =
 func clr*(r, g, b: float, a: float = 1f): ColorObj =
   initColor(r, g, b, a)
 
-func hsl*(h: 0..360 = 0, s: 0f32..1f32 = 0, l: 0f32..1f32, kind: HslMode = hmLightness): ColorHsl =
+func hsl*(
+    h: float = 0,
+    s: float = 0,
+    l: float = 0,
+    kind: HslMode = hmLightness
+): ColorHsl =
   #[Initializes HSL color model
   See https://en.wikipedia.org/wiki/HSL_and_HSV
   

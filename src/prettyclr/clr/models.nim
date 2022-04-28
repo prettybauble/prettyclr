@@ -4,7 +4,9 @@
 ]#
 import
   ../core/enums,
-  types
+  basic,
+  types,
+  math
 
 
 func rgba2hsl*(clr: ColorObj, kind: HslMode = hmLargest): ColorHsl =
@@ -16,13 +18,13 @@ func rgba2hsl*(clr: ColorObj, kind: HslMode = hmLargest): ColorHsl =
     chroma = M - m
     hue =
       if M == clr.r:
-        60 * (((clr.g - clr.b)/chroma).int() mod 6)
+        (clr.g - clr.b)/chroma
       elif M == clr.g:
-        60 * (((clr.b - clr.r)/chroma).int() + 2)
+        (clr.g - clr.b)/chroma + 2f
       elif M == clr.b:
-        60 * (((clr.r - clr.g)/chroma).int() + 4)
+        (clr.g - clr.b)/chroma + 4f
       else:
-        0
+        0f
     lightness =
       case kind
       of hmIntensity:
@@ -36,47 +38,56 @@ func rgba2hsl*(clr: ColorObj, kind: HslMode = hmLargest): ColorHsl =
     saturation =
       case kind
       of hmIntensity:
-        if lightness == 0: 0f else: 1f - m/lightness
+        if lightness == 0:
+          0f
+        else:
+          1f - m/lightness
       of hmLargest:
-        if lightness == 0: 0f else: chroma/lightness
+        if lightness == 0:
+          0f
+        else:
+          chroma/lightness
       of hmLightness, hmLuma:
-        if lightness == 0 or lightness == 1: 0f else: chroma/(1f - abs(2*lightness - 1f))
+        if lightness == 0 or lightness == 1:
+          0f
+        else:
+          chroma/(1f - abs(2*lightness - 1f))
   ColorHsl(h: hue, s: saturation, l: lightness, kind: kind)
 
-func hslExtractRgb(c, x: float32, hue: int): tuple[r, g, b: float32] =
-  if 0 <= hue and hue < 1:
-    (c, x, 0f)
-  elif 1 <= hue and hue < 2:
-    (x, c, 0f)
-  elif 2 <= hue and hue < 3:
-    (0f, c, x)
-  elif 3 <= hue and hue < 4:
-    (0f, x, c)
-  elif 4 <= hue and hue < 5:
-    (x, 0f, c)
-  elif 5 <= hue and hue < 6:
-    (c, 0f, x)
-  else:
-    (0f, 0f, 0f)
+func hue2rgb(p, q: float, t: var float): float =
+  if t < 0:
+    t += 1f
+  elif t > 1:
+    t -= 1f
+  elif t < 1/6:
+    return p + (q - p) * 6 * t
+  elif t < 1/2:
+    return q
+  elif t < 2/3:
+    return p + (q - p) * (2/3 - t) * 6
+  p
 
 
 func hsl2rgba*(clr: ColorHsl): ColorObj =
   ## Converts HSL color model to RGBA.
+  var
+    q =
+      if clr.l < 0.5:
+        clr.l * (1 + clr.s)
+      else:
+        clr.l + clr.s - clr.l * clr.s
+    p = 2 * clr.l - q
+    tr = clr.h + 1/3
+    tg = clr.h
+    tb = clr.h - 1/3
+  let
+    (r, g, b) = (hue2rgb(p, q, tr), hue2rgb(p, q, tg), hue2rgb(p, q, tb))
   case clr.kind
   of hmLightness:
-    let
-      chroma = clr.s * (1f - abs(2*clr.l - 1f))
-      hue = cast[int](clr.h / 60)
-      x = chroma * (1f - abs(cast[float](hue mod 2) - 1f))
-      (r, g, b) = hslExtractRgb(chroma, x, hue)
-      m = clr.l - chroma/2f
-    clr(r+m, g+m, b+m)
+    clr(r, g, b)
   of hmLargest:
     let
-      chroma = clr.s * clr.l
-      hue = cast[int](clr.h / 60)
-      x = chroma * (1f - abs(cast[float](hue mod 2) - 1f))
-      (r, g, b) = hslExtractRgb(chroma, x, hue)
+      chroma = clr.l*clr.s
       m = clr.l - chroma
     clr(r+m, g+m, b+m)
   of hmIntensity:
@@ -84,15 +95,11 @@ func hsl2rgba*(clr: ColorHsl): ColorObj =
       hue = cast[int](clr.h / 60)
       z = 1f - abs(cast[float](hue mod 2) - 1f)
       chroma = (3*clr.l*clr.s)/(1+z)
-      x = chroma*z
-      (r, g, b) = hslExtractRgb(chroma, x, hue)
       m = clr.l*(1f - clr.s)
-    clr(r+m, g+m, b+m)
+    normalize(abs(clr(r+m, g+m, b+m)))
   of hmLuma:
     let
       hue = cast[int](clr.h / 60)
       chroma = clr.s * (1f - abs(2*clr.l - 1f))
-      x = chroma * (1f - abs(cast[float](hue mod 2) - 1f))
-      (r, g, b) = hslExtractRgb(chroma, x, hue)
       m = (0.2627*r + 0.6780*g + 0.0593*b) - (0.30*r + 0.59*g + 0.11*b)
-    clr(r+m, g+m, b+m)
+    normalize(abs(clr(r+m, g+m, b+m)))
