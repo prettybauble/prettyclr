@@ -106,9 +106,7 @@ function main() {
   <li><a class="reference" href="#ColorHsl"
     title="ColorHsl = object
   kind*: HslMode
-  h*: range[0 .. 360]
-  s*: float
-  l*: float">ColorHsl</a></li>
+  h*, s*, l*: float">ColorHsl</a></li>
 
   </ul>
 </li>
@@ -116,9 +114,8 @@ function main() {
   <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">hsl
-      <li><a class="reference" href="#hsl%2Cint%2Cint%2C%2CHslMode"
-    title="hsl(h: 0 .. 360 = 0; s: 0.0&apos;f32 .. 1.0&apos;f32 = 0; l: 0.0&apos;f32 .. 1.0&apos;f32;
-    kind: HslMode = hmLightness): ColorHsl">hsl,<wbr>int,<wbr>int,<wbr>,<wbr>HslMode</a></li>
+      <li><a class="reference" href="#hsl%2Cfloat%2Cfloat%2Cfloat%2CHslMode"
+    title="hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl">hsl,<wbr>float,<wbr>float,<wbr>float,<wbr>HslMode</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">clr
@@ -170,9 +167,7 @@ function main() {
 <a id="ColorHsl"></a>
 <dt><pre><a href="types.html#ColorHsl"><span class="Identifier">ColorHsl</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="../core/enums.html#HslMode"><span class="Identifier">HslMode</span></a>
-  <span class="Identifier">h</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">range</span><span class="Other">[</span><span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">360</span><span class="Other">]</span>
-  <span class="Identifier">s</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
-  <span class="Identifier">l</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
+  <span class="Identifier">h</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">s</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">l</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
 </pre></dt>
 <dd>
 
@@ -228,9 +223,9 @@ Creates the new transparent color (0, 0, 0, 0)
 
 
 </dd>
-<a id="hsl,int,int,,HslMode"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#hsl%2Cint%2Cint%2C%2CHslMode"><span class="Identifier">hsl</span></a><span class="Other">(</span><span class="Identifier">h</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">360</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <span class="FloatNumber">0.0'f32</span> <span class="Operator">..</span> <span class="FloatNumber">1.0'f32</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">l</span><span class="Other">:</span> <span class="FloatNumber">0.0'f32</span> <span class="Operator">..</span> <span class="FloatNumber">1.0'f32</span><span class="Other">;</span>
-         <span class="Identifier">kind</span><span class="Other">:</span> <a href="../core/enums.html#HslMode"><span class="Identifier">HslMode</span></a> <span class="Other">=</span> <span class="Identifier">hmLightness</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsl"><span class="Identifier">ColorHsl</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="hsl,float,float,float,HslMode"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#hsl%2Cfloat%2Cfloat%2Cfloat%2CHslMode"><span class="Identifier">hsl</span></a><span class="Other">(</span><span class="Identifier">h</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">l</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">kind</span><span class="Other">:</span> <a href="../core/enums.html#HslMode"><span class="Identifier">HslMode</span></a> <span class="Other">=</span> <span class="Identifier">hmLightness</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsl"><span class="Identifier">ColorHsl</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -246,7 +241,7 @@ Creates the new transparent color (0, 0, 0, 0)
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-22 12:47:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-28 17:14:37 UTC</small>
       </div>
     </div>
   </div>

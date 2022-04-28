@@ -6,4 +6,4 @@ initColor	prettyclr/clr/types.html#initColor,float,float,float,float	types: init
 clr	prettyclr/clr/types.html#clr	types: clr(): ColorObj	
 clr	prettyclr/clr/types.html#clr,uint8,uint8,uint8,uint8	types: clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj	
 clr	prettyclr/clr/types.html#clr,float,float,float,float	types: clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj	
-hsl	prettyclr/clr/types.html#hsl,int,int,,HslMode	types: hsl(h: 0 .. 360 = 0; s: 0.0&apos;f32 .. 1.0&apos;f32 = 0; l: 0.0&apos;f32 .. 1.0&apos;f32;\n    kind: HslMode = hmLightness): ColorHsl	
+hsl	prettyclr/clr/types.html#hsl,float,float,float,HslMode	types: hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl	

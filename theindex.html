@@ -66,6 +66,8 @@ function main() {
     Modules: <a href="prettyclr/clr/basic.html">prettyclr/clr/basic</a>, <a href="prettyclr/clr/models.html">prettyclr/clr/models</a>, <a href="prettyclr/clr/parsers.html">prettyclr/clr/parsers</a>, <a href="prettyclr/clr/private/colors.html">prettyclr/clr/private/colors</a>, <a href="prettyclr/clr/private/patterns.html">prettyclr/clr/private/patterns</a>, <a href="prettyclr/clr/types.html">prettyclr/clr/types</a>, <a href="prettyclr/core/enums.html">prettyclr/core/enums</a>, <a href="prettyclr/core/exceptions.html">prettyclr/core/exceptions</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="basic: `$`(clr: ColorHsl): string" href="prettyclr/clr/basic.html#%24%2CColorHsl">basic: `$`(clr: ColorHsl): string</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="basic: `$`(clr: ColorObj): string" href="prettyclr/clr/basic.html#%24%2CColorObj">basic: `$`(clr: ColorObj): string</a></li>
           </ul></dd>
 <dt><a name="%60%2A%3D%60" href="#%60%2A%3D%60"><span>`*=`:</span></a></dt><dd><ul class="simple">
@@ -182,7 +184,7 @@ function main() {
           </ul></dd>
 <dt><a name="bright" href="#bright"><span>bright:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="basic: bright(clr: ColorObj): float" href="prettyclr/clr/basic.html#bright%2CColorObj">basic: bright(clr: ColorObj): float</a></li>
+          data-doc-search-tag="basic: bright(clr: ColorObj; include_alpha: bool = false): float" href="prettyclr/clr/basic.html#bright%2CColorObj%2Cbool">basic: bright(clr: ColorObj; include_alpha: bool = false): float</a></li>
           </ul></dd>
 <dt><a name="clr" href="#clr"><span>clr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -208,6 +210,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="exceptions: ColorStringParseError" href="prettyclr/core/exceptions.html#ColorStringParseError">exceptions: ColorStringParseError</a></li>
           </ul></dd>
+<dt><a name="grayscale" href="#grayscale"><span>grayscale:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="basic: grayscale(clr: ColorObj): ColorObj" href="prettyclr/clr/basic.html#grayscale%2CColorObj">basic: grayscale(clr: ColorObj): ColorObj</a></li>
+          </ul></dd>
 <dt><a name="HEX_COLOR_PATTERN" href="#HEX_COLOR_PATTERN"><span>HEX_COLOR_PATTERN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="patterns: HEX_COLOR_PATTERN" href="prettyclr/clr/private/patterns.html#HEX_COLOR_PATTERN">patterns: HEX_COLOR_PATTERN</a></li>
@@ -230,9 +236,7 @@ function main() {
           </ul></dd>
 <dt><a name="hsl" href="#hsl"><span>hsl:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: hsl(h: 0 .. 360 = 0; s: 0.0&apos;f32 .. 1.0&apos;f32 = 0; l: 0.0&apos;f32 .. 1.0&apos;f32;
-    kind: HslMode = hmLightness): ColorHsl" href="prettyclr/clr/types.html#hsl%2Cint%2Cint%2C%2CHslMode">types: hsl(h: 0 .. 360 = 0; s: 0.0&apos;f32 .. 1.0&apos;f32 = 0; l: 0.0&apos;f32 .. 1.0&apos;f32;
-    kind: HslMode = hmLightness): ColorHsl</a></li>
+          data-doc-search-tag="types: hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl" href="prettyclr/clr/types.html#hsl%2Cfloat%2Cfloat%2Cfloat%2CHslMode">types: hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl</a></li>
           </ul></dd>
 <dt><a name="hsl2rgba" href="#hsl2rgba"><span>hsl2rgba:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -263,6 +267,10 @@ function main() {
           data-doc-search-tag="basic: mix(clr1, clr2: ColorObj): ColorObj" href="prettyclr/clr/basic.html#mix%2CColorObj%2CColorObj">basic: mix(clr1, clr2: ColorObj): ColorObj</a></li>
           <li><a class="reference external"
           data-doc-search-tag="basic: mix(clr1, clr2: ColorObj; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj" href="prettyclr/clr/basic.html#mix%2CColorObj%2CColorObj%2C">basic: mix(clr1, clr2: ColorObj; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj</a></li>
+          </ul></dd>
+<dt><a name="mono" href="#mono"><span>mono:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="basic: mono(clr: ColorObj): ColorObj" href="prettyclr/clr/basic.html#mono%2CColorObj">basic: mono(clr: ColorObj): ColorObj</a></li>
           </ul></dd>
 <dt><a name="normalize" href="#normalize"><span>normalize:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -295,7 +303,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-22 12:47:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-28 17:14:38 UTC</small>
       </div>
     </div>
   </div>
