@@ -66,7 +66,7 @@ function main() {
     Modules: <a href="prettyclr/clr/basic.html">prettyclr/clr/basic</a>, <a href="prettyclr/clr/models.html">prettyclr/clr/models</a>, <a href="prettyclr/clr/parsers.html">prettyclr/clr/parsers</a>, <a href="prettyclr/clr/private/colors.html">prettyclr/clr/private/colors</a>, <a href="prettyclr/clr/private/patterns.html">prettyclr/clr/private/patterns</a>, <a href="prettyclr/clr/types.html">prettyclr/clr/types</a>, <a href="prettyclr/core/enums.html">prettyclr/core/enums</a>, <a href="prettyclr/core/exceptions.html">prettyclr/core/exceptions</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="basic: `$`(clr: ColorHsl): string" href="prettyclr/clr/basic.html#%24%2CColorHsl">basic: `$`(clr: ColorHsl): string</a></li>
+          data-doc-search-tag="basic: `$`(clr: ColorHsv): string" href="prettyclr/clr/basic.html#%24%2CColorHsv">basic: `$`(clr: ColorHsv): string</a></li>
           <li><a class="reference external"
           data-doc-search-tag="basic: `$`(clr: ColorObj): string" href="prettyclr/clr/basic.html#%24%2CColorObj">basic: `$`(clr: ColorObj): string</a></li>
           </ul></dd>
@@ -190,13 +190,15 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="types: clr(): ColorObj" href="prettyclr/clr/types.html#clr">types: clr(): ColorObj</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="types: clr(v: float; a: float = 1.0&apos;f32): ColorObj" href="prettyclr/clr/types.html#clr%2Cfloat%2Cfloat">types: clr(v: float; a: float = 1.0&apos;f32): ColorObj</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="types: clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj" href="prettyclr/clr/types.html#clr%2Cfloat%2Cfloat%2Cfloat%2Cfloat">types: clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj</a></li>
           <li><a class="reference external"
           data-doc-search-tag="types: clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj" href="prettyclr/clr/types.html#clr%2Cuint8%2Cuint8%2Cuint8%2Cuint8">types: clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj</a></li>
           </ul></dd>
-<dt><a name="ColorHsl" href="#ColorHsl"><span>ColorHsl:</span></a></dt><dd><ul class="simple">
+<dt><a name="ColorHsv" href="#ColorHsv"><span>ColorHsv:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: ColorHsl" href="prettyclr/clr/types.html#ColorHsl">types: ColorHsl</a></li>
+          data-doc-search-tag="types: ColorHsv" href="prettyclr/clr/types.html#ColorHsv">types: ColorHsv</a></li>
           </ul></dd>
 <dt><a name="color_list" href="#color_list"><span>color_list:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -218,33 +220,13 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="patterns: HEX_COLOR_PATTERN" href="prettyclr/clr/private/patterns.html#HEX_COLOR_PATTERN">patterns: HEX_COLOR_PATTERN</a></li>
           </ul></dd>
-<dt><a name="hmIntensity" href="#hmIntensity"><span>hmIntensity:</span></a></dt><dd><ul class="simple">
+<dt><a name="hsv" href="#hsv"><span>hsv:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="HslMode.hmIntensity" href="prettyclr/core/enums.html#hmIntensity">HslMode.hmIntensity</a></li>
+          data-doc-search-tag="types: hsv(h: float = 0; s: float = 0; v: float = 0): ColorHsv" href="prettyclr/clr/types.html#hsv%2Cfloat%2Cfloat%2Cfloat">types: hsv(h: float = 0; s: float = 0; v: float = 0): ColorHsv</a></li>
           </ul></dd>
-<dt><a name="hmLargest" href="#hmLargest"><span>hmLargest:</span></a></dt><dd><ul class="simple">
+<dt><a name="hsv2rgb" href="#hsv2rgb"><span>hsv2rgb:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="HslMode.hmLargest" href="prettyclr/core/enums.html#hmLargest">HslMode.hmLargest</a></li>
-          </ul></dd>
-<dt><a name="hmLightness" href="#hmLightness"><span>hmLightness:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="HslMode.hmLightness" href="prettyclr/core/enums.html#hmLightness">HslMode.hmLightness</a></li>
-          </ul></dd>
-<dt><a name="hmLuma" href="#hmLuma"><span>hmLuma:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="HslMode.hmLuma" href="prettyclr/core/enums.html#hmLuma">HslMode.hmLuma</a></li>
-          </ul></dd>
-<dt><a name="hsl" href="#hsl"><span>hsl:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="types: hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl" href="prettyclr/clr/types.html#hsl%2Cfloat%2Cfloat%2Cfloat%2CHslMode">types: hsl(h: float = 0; s: float = 0; l: float = 0; kind: HslMode = hmLightness): ColorHsl</a></li>
-          </ul></dd>
-<dt><a name="hsl2rgba" href="#hsl2rgba"><span>hsl2rgba:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="models: hsl2rgba(clr: ColorHsl): ColorObj" href="prettyclr/clr/models.html#hsl2rgba%2CColorHsl">models: hsl2rgba(clr: ColorHsl): ColorObj</a></li>
-          </ul></dd>
-<dt><a name="HslMode" href="#HslMode"><span>HslMode:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="enums: HslMode" href="prettyclr/core/enums.html#HslMode">enums: HslMode</a></li>
+          data-doc-search-tag="models: hsv2rgb(clr: ColorHsv): ColorObj" href="prettyclr/clr/models.html#hsv2rgb%2CColorHsv">models: hsv2rgb(clr: ColorHsv): ColorObj</a></li>
           </ul></dd>
 <dt><a name="initColor" href="#initColor"><span>initColor:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -264,9 +246,7 @@ function main() {
           </ul></dd>
 <dt><a name="mix" href="#mix"><span>mix:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="basic: mix(clr1, clr2: ColorObj): ColorObj" href="prettyclr/clr/basic.html#mix%2CColorObj%2CColorObj">basic: mix(clr1, clr2: ColorObj): ColorObj</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="basic: mix(clr1, clr2: ColorObj; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj" href="prettyclr/clr/basic.html#mix%2CColorObj%2CColorObj%2C">basic: mix(clr1, clr2: ColorObj; fraction: 0.0&apos;f32 .. 1.0&apos;f32): ColorObj</a></li>
+          data-doc-search-tag="basic: mix(clr1, clr2: ColorObj; fraction: float = -1.0&apos;f32): ColorObj" href="prettyclr/clr/basic.html#mix%2CColorObj%2CColorObj%2Cfloat">basic: mix(clr1, clr2: ColorObj; fraction: float = -1.0&apos;f32): ColorObj</a></li>
           </ul></dd>
 <dt><a name="mono" href="#mono"><span>mono:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -286,13 +266,17 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="basic: pow(clr: ColorObj; power: float): ColorObj" href="prettyclr/clr/basic.html#pow%2CColorObj%2Cfloat">basic: pow(clr: ColorObj; power: float): ColorObj</a></li>
           </ul></dd>
-<dt><a name="rgba2hsl" href="#rgba2hsl"><span>rgba2hsl:</span></a></dt><dd><ul class="simple">
+<dt><a name="rgb2hsv" href="#rgb2hsv"><span>rgb2hsv:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="models: rgba2hsl(clr: ColorObj; kind: HslMode = hmLargest): ColorHsl" href="prettyclr/clr/models.html#rgba2hsl%2CColorObj%2CHslMode">models: rgba2hsl(clr: ColorObj; kind: HslMode = hmLargest): ColorHsl</a></li>
+          data-doc-search-tag="models: rgb2hsv(clr: ColorObj): ColorHsv" href="prettyclr/clr/models.html#rgb2hsv%2CColorObj">models: rgb2hsv(clr: ColorObj): ColorHsv</a></li>
           </ul></dd>
 <dt><a name="RGBA_COLOR_PATTERN" href="#RGBA_COLOR_PATTERN"><span>RGBA_COLOR_PATTERN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="patterns: RGBA_COLOR_PATTERN" href="prettyclr/clr/private/patterns.html#RGBA_COLOR_PATTERN">patterns: RGBA_COLOR_PATTERN</a></li>
+          </ul></dd>
+<dt><a name="round" href="#round"><span>round:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="basic: round(clr: ColorObj; place: int): ColorObj" href="prettyclr/clr/basic.html#round%2CColorObj%2Cint">basic: round(clr: ColorObj; place: int): ColorObj</a></li>
           </ul></dd>
 <dt><a name="sqrt" href="#sqrt"><span>sqrt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -303,7 +287,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-28 17:14:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-29 15:03:38 UTC</small>
       </div>
     </div>
   </div>
