@@ -9,97 +9,83 @@ import
   math
 
 
-func rgba2hsl*(clr: ColorObj, kind: HslMode = hmLargest): ColorHsl =
-  ## Converts RGBA color model to HSV color model.
-  ## https://en.wikipedia.org/wiki/HSV_color_space
-  let
-    M = max(max(clr.r, clr.b), clr.g)  # maximum color value
-    m = min(min(clr.r, clr.b), clr.g)  # minimum color value
-    chroma = M - m
-    hue =
-      if M == clr.r:
-        (clr.g - clr.b)/chroma
-      elif M == clr.g:
-        (clr.g - clr.b)/chroma + 2f
-      elif M == clr.b:
-        (clr.g - clr.b)/chroma + 4f
-      else:
-        0f
-    lightness =
-      case kind
-      of hmIntensity:
-        (clr.r + clr.g + clr.b)/3f
-      of hmLargest:
-        M
-      of hmLightness:
-        (M + m)/2
-      of hmLuma:
-        0.2627*clr.r + 0.6780*clr.g + 0.0593*clr.b  # UHDTV/HDR lumination
-    saturation =
-      case kind
-      of hmIntensity:
-        if lightness == 0:
-          0f
-        else:
-          1f - m/lightness
-      of hmLargest:
-        if lightness == 0:
-          0f
-        else:
-          chroma/lightness
-      of hmLightness, hmLuma:
-        if lightness == 0 or lightness == 1:
-          0f
-        else:
-          chroma/(1f - abs(2*lightness - 1f))
-  ColorHsl(h: hue, s: saturation, l: lightness, kind: kind)
-
-func hue2rgb(p, q: float, t: var float): float =
-  if t < 0:
-    t += 1f
-  elif t > 1:
-    t -= 1f
-  elif t < 1/6:
-    return p + (q - p) * 6 * t
-  elif t < 1/2:
-    return q
-  elif t < 2/3:
-    return p + (q - p) * (2/3 - t) * 6
-  p
-
-
-func hsl2rgba*(clr: ColorHsl): ColorObj =
-  ## Converts HSL color model to RGBA.
+{.push inline.}
+func rgb2hsv*(clr: ColorObj): ColorHsv =
   var
-    q =
-      if clr.l < 0.5:
-        clr.l * (1 + clr.s)
-      else:
-        clr.l + clr.s - clr.l * clr.s
-    p = 2 * clr.l - q
-    tr = clr.h + 1/3
-    tg = clr.h
-    tb = clr.h - 1/3
-  let
-    (r, g, b) = (hue2rgb(p, q, tr), hue2rgb(p, q, tg), hue2rgb(p, q, tb))
-  case clr.kind
-  of hmLightness:
-    clr(r, g, b)
-  of hmLargest:
-    let
-      chroma = clr.l*clr.s
-      m = clr.l - chroma
-    clr(r+m, g+m, b+m)
-  of hmIntensity:
-    let
-      hue = cast[int](clr.h / 60)
-      z = 1f - abs(cast[float](hue mod 2) - 1f)
-      chroma = (3*clr.l*clr.s)/(1+z)
-      m = clr.l*(1f - clr.s)
-    normalize(abs(clr(r+m, g+m, b+m)))
-  of hmLuma:
-    let
-      hue = cast[int](clr.h / 60)
-      chroma = clr.s * (1f - abs(2*clr.l - 1f))
-      m = (0.2627*r + 0.6780*g + 0.0593*b) - (0.30*r + 0.59*g + 0.11*b)
-    normalize(abs(clr(r+m, g+m, b+m)))
+    mn = min(min(clr.r, clr.g), clr.b)
+    mx = max(max(clr.r, clr.g), clr.b)
+    delta = mx - mn
+
+  result.v = mx
+
+  if delta < 0.00001:
+      result.s = 0
+      result.h = 0
+      return result
+  if mx > 0f:
+      result.s = (delta / mx);
+  else:
+      result.s = 0f
+      result.h = NAN
+      return result
+  if clr.r >= mx:
+      result.h = (clr.g - clr.b) / delta
+  elif clr.g >= mx:
+      result.h = 2f + (clr.b - clr.r) / delta
+  else:
+      result.h = 4f + (clr.r - clr.g) / delta
+
+  result.h *= 60f
+
+  if result.h < 0f:
+      result.h += 360f
+
+
+func hsv2rgb*(clr: ColorHsv): ColorObj =
+  var
+    hh, p, q, t, ff: float
+
+  if clr.s <= 0f:
+      result.r = clr.v
+      result.g = clr.v
+      result.b = clr.v
+      return result
+  hh = clr.h
+  if hh >= 360f:
+    hh = 0f
+  hh /= 60f
+
+  let i = hh.int()
+  ff = hh - i.float()
+  p = clr.v * (1f - clr.s)
+  q = clr.v * (1f - (clr.s * ff))
+  t = clr.v * (1f - (clr.s * (1f - ff)))
+
+  case i:
+    of 0:
+      result.r = clr.v
+      result.g = t
+      result.b = p
+    of 1:
+      result.r = q
+      result.g = clr.v
+      result.b = p
+    of 2:
+      result.r = p
+      result.g = clr.v
+      result.b = t
+    of 3:
+      result.r = p
+      result.g = q
+      result.b = clr.v
+    of 4:
+      result.r = t
+      result.g = p
+      result.b = clr.v
+    else:
+      result.r = clr.v
+      result.g = p
+      result.b = q
+  return result
+
+{.pop.}

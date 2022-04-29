@@ -1,13 +1,11 @@
 # author: Ethosa
 ## Provides color types
-import ../core/enums
 
 type
   ColorObj* = object
     r*, g*, b*, a*: float
-  ColorHsl* = object
-    kind*: HslMode
-    h*, s*, l*: float
+  ColorHsv* = object
+    h*, s*, v*: float
 
 
 {.push inline.}
@@ -25,26 +23,38 @@ func initColor*(r, g, b, a: float): ColorObj =
 
 
 func clr*: ColorObj =
-  ## Creates the new transparent color (0, 0, 0, 0)
+  ## Creates transparent color (0, 0, 0, 0)
   initColor(0, 0, 0, 0)
 
+func clr*(v: float, a: float = 1f): ColorObj =
+  ## Creates grayscale color
+  initColor(v, v, v, a)
+
 func clr*(r, g, b: uint8, a: uint8 = 255u8): ColorObj =
-  initColor(int(r) / 255, int(g) / 255, int(b) / 255, int(a) / 255)
+  #[ Initializes the color object
+     with RGBA values in 0..255 range ]#
+  initColor(
+    int(r) / 255,
+    int(g) / 255,
+    int(b) / 255,
+    int(a) / 255
+  )
 
 func clr*(r, g, b: float, a: float = 1f): ColorObj =
+  #[ Initializes the color object
+     with RGBA values in 0..1 range ]#
   initColor(r, g, b, a)
 
-func hsl*(
+func hsv*(
     h: float = 0,
     s: float = 0,
-    l: float = 0,
-    kind: HslMode = hmLightness
-): ColorHsl =
+    v: float = 0
+): ColorHsv =
   #[Initializes HSL color model
   See https://en.wikipedia.org/wiki/HSL_and_HSV
   
   `kind` param can be also `hmLarger` (HSV), `hmLuma` (HSY), `hmIntensity` (HSI).
   ]#
-  ColorHsl(kind: kind, h: h, s: s, l: l)
+  ColorHsv(h: h, s: s, v: v)
 
 {.pop.}

@@ -59,14 +59,6 @@ suite "Working with colors":
   test "lighten only blend":
     assert blend(clr1, clr2, bmLightenOnly) == clr(1f, 1f, 1f, 1f)
 
-  test "HSL color model":
-    var
-      rgba_clr = clr(1f, 0.5, 0.25)
-    echo rgba2hsl(rgba_clr, hmLargest)
-    echo rgba2hsl(rgba_clr, hmLightness)
-    echo rgba2hsl(rgba_clr, hmIntensity)
-    echo rgba2hsl(rgba_clr, hmLuma)
-    echo hsl2rgba(rgba2hsl(rgba_clr, hmLargest))
-    echo hsl2rgba(rgba2hsl(rgba_clr, hmLightness))
-    echo hsl2rgba(rgba2hsl(rgba_clr, hmIntensity))
-    echo hsl2rgba(rgba2hsl(rgba_clr, hmLuma))
+  test "mono":
+    echo clr1.mono()
+    echo clr2.mono()

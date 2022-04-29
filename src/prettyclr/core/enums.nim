@@ -15,9 +15,4 @@ type
     bmDifference,  # f(a,b) = abs(a - b)
     bmDarkenOnly,  # f(a,b) = min(a.r,b.r),min(a.g,b.g),..
     bmLightenOnly  # f(a,b) = max(a.r,b.r),max(a.g,b.g),..
-  HslMode* = enum
-    hmIntensity,  # I = avg(r, g, b)
-    hmLargest,  # V = max(r, g, b)
-    hmLightness,  # L = avg(max(r, g, b), min(r, g, b))
-    hmLuma  # Y2020 = 0.2627*R + 0.6780*G + 0.0593*B  (Adobe)
 {.pop.}

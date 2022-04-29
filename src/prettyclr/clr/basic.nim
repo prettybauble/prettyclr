@@ -6,7 +6,7 @@ import
   math
 
 
-{.push inline.}
+{.push inline, discardable.}
 func norm(
     v: float,
     mn: float = 0f,
@@ -27,16 +27,10 @@ func normalize*(clr: ColorObj): ColorObj =
   result.b = norm(result.b)
   result.a = norm(result.a)
 
-func mix*(clr1, clr2: ColorObj): ColorObj =
-  ## Mixes two colors
-  let
-    r = (clr2.r - clr1.r) * clr2.a + clr1.r
-    g = (clr2.g - clr1.g) * clr2.a + clr1.g
-    b = (clr2.b - clr1.b) * clr2.a + clr1.b
-    a = (clr2.a - clr1.a) * clr2.a + clr1.a
-  clr(r, g, b, a)
-
-func mix*(clr1, clr2: ColorObj, fraction: 0f..1f): ColorObj =
+func mix*(
+    clr1, clr2: ColorObj,
+    fraction: 0f..1f = clr2.a
+): ColorObj =
   ## Mixes two colors
   let
     r = (clr2.r - clr1.r) * fraction + clr1.r
@@ -97,8 +91,8 @@ func grayscale*(clr: ColorObj): ColorObj =
 
 func mono*(clr: ColorObj): ColorObj =
   ## Returns color divided by 3
-  let bright = (clr.r + clr.g + clr.b)/3
-  clr()
+  let bright = round((clr.r + clr.g + clr.b)/3)
+  clr(bright, bright, bright)
 
 
 # ---- Operators ---- #
@@ -179,8 +173,8 @@ func `*=`*(clr: var ColorObj, v: float | ColorObj) =
 func `$`*(clr: ColorObj): string =
   fmt"Color<{clr.r}, {clr.g}, {clr.b}, {clr.a}>"
 
-func `$`*(clr: ColorHsl): string =
-  fmt"Color<[{clr.h}, {clr.s}, {clr.l}] with {clr.kind}>"
+func `$`*(clr: ColorHsv): string =
+  fmt"HSV Color<[{clr.h}, {clr.s}, {clr.v}]>"
 
 
 func blend*(
