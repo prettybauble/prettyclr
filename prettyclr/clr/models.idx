@@ -1,2 +1,2 @@
-rgb2hsv	prettyclr/clr/models.html#rgb2hsv,ColorObj	models: rgb2hsv(clr: ColorObj): ColorHsv	
-hsv2rgb	prettyclr/clr/models.html#hsv2rgb,ColorHsv	models: hsv2rgb(clr: ColorHsv): ColorObj	
+hsv	prettyclr/clr/models.html#hsv,ColorObj	models: hsv(clr: ColorObj): ColorHsv	
+rgb	prettyclr/clr/models.html#rgb,ColorHsv	models: rgb(clr: ColorHsv): ColorObj	

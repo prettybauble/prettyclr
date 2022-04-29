@@ -112,6 +112,11 @@ function main() {
     title="`$`(clr: ColorHsv): string">$,<wbr>ColorHsv</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">square
+      <li><a class="reference" href="#square%2CColorHsv"
+    title="square(clr: ColorHsv): array[3, ColorHsv]">square,<wbr>ColorHsv</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">mono
       <li><a class="reference" href="#mono%2CColorObj"
     title="mono(clr: ColorObj): ColorObj">mono,<wbr>ColorObj</a></li>
@@ -124,6 +129,21 @@ function main() {
     title="`/`(clr: ColorObj; v: float): ColorObj">/,<wbr>ColorObj,<wbr>float</a></li>
   <li><a class="reference" href="#%2F%2Cfloat%2CColorObj"
     title="`/`(v: float; clr: ColorObj): ColorObj">/,<wbr>float,<wbr>ColorObj</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">invert
+      <li><a class="reference" href="#invert%2CColorObj"
+    title="invert(clr: ColorObj): ColorObj">invert,<wbr>ColorObj</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">complementary
+      <li><a class="reference" href="#complementary%2CColorHsv"
+    title="complementary(clr: ColorHsv): ColorHsv">complementary,<wbr>ColorHsv</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">analogous
+      <li><a class="reference" href="#analogous%2CColorHsv"
+    title="analogous(clr: ColorHsv): array[2, ColorHsv]">analogous,<wbr>ColorHsv</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">max
@@ -149,6 +169,11 @@ function main() {
     title="`-`(v: float; clr: ColorObj): ColorObj">-,<wbr>float,<wbr>ColorObj</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">rotate
+      <li><a class="reference" href="#rotate%2CColorHsv%2Cfloat"
+    title="rotate(clr: ColorHsv; value: float): ColorHsv">rotate,<wbr>ColorHsv,<wbr>float</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">bright
       <li><a class="reference" href="#bright%2CColorObj%2Cbool"
     title="bright(clr: ColorObj; include_alpha: bool = false): float">bright,<wbr>ColorObj,<wbr>bool</a></li>
@@ -169,6 +194,11 @@ function main() {
     title="sqrt(clr: ColorObj): ColorObj">sqrt,<wbr>ColorObj</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">tetradic
+      <li><a class="reference" href="#tetradic%2CColorHsv"
+    title="tetradic(clr: ColorHsv): array[3, ColorHsv]">tetradic,<wbr>ColorHsv</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">grayscale
       <li><a class="reference" href="#grayscale%2CColorObj"
     title="grayscale(clr: ColorObj): ColorObj">grayscale,<wbr>ColorObj</a></li>
@@ -177,6 +207,11 @@ function main() {
   <ul class="simple nested-toc-section">normalize
       <li><a class="reference" href="#normalize%2CColorObj"
     title="normalize(clr: ColorObj): ColorObj">normalize,<wbr>ColorObj</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">triad
+      <li><a class="reference" href="#triad%2CColorHsv"
+    title="triad(clr: ColorHsv): array[2, ColorHsv]">triad,<wbr>ColorHsv</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">/=
@@ -330,6 +365,61 @@ Returns color divided by 3
 <dd>
 
 Returns color divided by 3
+
+</dd>
+<a id="invert,ColorObj"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#invert%2CColorObj"><span class="Identifier">invert</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns inverted color
+
+</dd>
+<a id="rotate,ColorHsv,float"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#rotate%2CColorHsv%2Cfloat"><span class="Identifier">rotate</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Rotates hue color
+
+</dd>
+<a id="complementary,ColorHsv"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#complementary%2CColorHsv"><span class="Identifier">complementary</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns complementary color
+
+</dd>
+<a id="triad,ColorHsv"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#triad%2CColorHsv"><span class="Identifier">triad</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">2</span><span class="Other">,</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns triad colors
+
+</dd>
+<a id="analogous,ColorHsv"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#analogous%2CColorHsv"><span class="Identifier">analogous</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">2</span><span class="Other">,</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns analogous colors
+
+</dd>
+<a id="tetradic,ColorHsv"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#tetradic%2CColorHsv"><span class="Identifier">tetradic</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns tetradic colors
+
+</dd>
+<a id="square,ColorHsv"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#square%2CColorHsv"><span class="Identifier">square</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns square colors
 
 </dd>
 <a id="==,ColorObj,ColorObj"></a>
@@ -498,7 +588,7 @@ Blends two colors.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-29 15:04:19 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-29 15:39:01 UTC</small>
       </div>
     </div>
   </div>

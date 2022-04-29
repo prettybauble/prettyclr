@@ -9,6 +9,13 @@ pow	prettyclr/clr/basic.html#pow,ColorObj,float	basic: pow(clr: ColorObj; power:
 bright	prettyclr/clr/basic.html#bright,ColorObj,bool	basic: bright(clr: ColorObj; include_alpha: bool = false): float	
 grayscale	prettyclr/clr/basic.html#grayscale,ColorObj	basic: grayscale(clr: ColorObj): ColorObj	
 mono	prettyclr/clr/basic.html#mono,ColorObj	basic: mono(clr: ColorObj): ColorObj	
+invert	prettyclr/clr/basic.html#invert,ColorObj	basic: invert(clr: ColorObj): ColorObj	
+rotate	prettyclr/clr/basic.html#rotate,ColorHsv,float	basic: rotate(clr: ColorHsv; value: float): ColorHsv	
+complementary	prettyclr/clr/basic.html#complementary,ColorHsv	basic: complementary(clr: ColorHsv): ColorHsv	
+triad	prettyclr/clr/basic.html#triad,ColorHsv	basic: triad(clr: ColorHsv): array[2, ColorHsv]	
+analogous	prettyclr/clr/basic.html#analogous,ColorHsv	basic: analogous(clr: ColorHsv): array[2, ColorHsv]	
+tetradic	prettyclr/clr/basic.html#tetradic,ColorHsv	basic: tetradic(clr: ColorHsv): array[3, ColorHsv]	
+square	prettyclr/clr/basic.html#square,ColorHsv	basic: square(clr: ColorHsv): array[3, ColorHsv]	
 `==`	prettyclr/clr/basic.html#==,ColorObj,ColorObj	basic: `==`(clr1, clr2: ColorObj): bool	
 `+`	prettyclr/clr/basic.html#+,ColorObj,ColorObj	basic: `+`(clr1, clr2: ColorObj): ColorObj	
 `-`	prettyclr/clr/basic.html#-,ColorObj,ColorObj	basic: `-`(clr1, clr2: ColorObj): ColorObj	
