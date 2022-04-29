@@ -104,6 +104,42 @@ func mono*(clr: ColorObj): ColorObj =
   let bright = round((clr.r + clr.g + clr.b)/3)
   clr(bright, bright, bright)
 
+func invert*(clr: ColorObj): ColorObj =
+  ## Returns inverted color
+  clr(
+    abs(1f - clr.r),
+    abs(1f - clr.g),
+    abs(1f - clr.b),
+    abs(1f - clr.a)
+  )
+
+func rotate*(clr: ColorHsv, value: float): ColorHsv =
+  ## Rotates hue color
+  var hue = clr.h + value
+  while hue > 360f or hue < 0f:
+    hue = abs(360f - abs(hue))
+  hsv(hue, clr.s, clr.v)
+
+func complementary*(clr: ColorHsv): ColorHsv =
+  ## Returns complementary color
+  clr.rotate(180)
+
+func triad*(clr: ColorHsv): array[2, ColorHsv] =
+  ## Returns triad colors
+  [clr.rotate(120), clr.rotate(-120)]
+
+func analogous*(clr: ColorHsv): array[2, ColorHsv] =
+  ## Returns analogous colors
+  [clr.rotate(-30), clr.rotate(30)]
+
+func tetradic*(clr: ColorHsv): array[3, ColorHsv] =
+  ## Returns tetradic colors
+  [clr.rotate(90), clr.rotate(180), clr.rotate(240)]
+
+func square*(clr: ColorHsv): array[3, ColorHsv] =
+  ## Returns square colors
+  [clr.rotate(90), clr.rotate(180), clr.rotate(270)]
+
 
 # ---- Operators ---- #
 func `==`*(clr1, clr2: ColorObj): bool =

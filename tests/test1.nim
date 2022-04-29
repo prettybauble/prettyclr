@@ -61,9 +61,30 @@ suite "Working with colors":
 
   test "HSV":
     let rgb = clr(100, 150, 200).round(3)
-    assert rgb2hsv(rgb) == hsv(210f, 0.5, 0.784)
-    assert hsv2rgb(rgb2hsv(rgb)).round(3) == rgb
+    assert rgb.hsv() == hsv(210f, 0.5, 0.784)
+    assert rgb.hsv().rgb().round(3) == rgb
 
   test "mono":
     echo clr1.mono()
     echo clr2.mono()
+
+  test "invert":
+    echo clr1, ", ", clr2
+    echo clr1.invert()
+    echo clr2.invert()
+
+  test "rotate hsv":
+    let hsv = clr1.hsv()
+    echo hsv
+    echo hsv.rotate(-30)
+    echo hsv.rotate(730)
+    echo hsv.rotate(-80)
+
+  test "complementary":
+    let hsv = clr1.hsv()
+    echo hsv
+    echo hsv.complementary()
+    echo hsv.triad()
+    echo hsv.analogous()
+    echo hsv.tetradic()
+    echo hsv.square()

@@ -6,7 +6,7 @@ import types
 
 
 {.push inline.}
-func rgb2hsv*(clr: ColorObj): ColorHsv =
+func hsv*(clr: ColorObj): ColorHsv =
   var
     mn = min(min(clr.r, clr.g), clr.b)
     mx = max(max(clr.r, clr.g), clr.b)
@@ -37,7 +37,7 @@ func rgb2hsv*(clr: ColorObj): ColorHsv =
       result.h += 360f
 
 
-func hsv2rgb*(clr: ColorHsv): ColorObj =
+func rgb*(clr: ColorHsv): ColorObj =
   var
     hh, p, q, t, ff: float
   result.a = 1f
