@@ -29,14 +29,15 @@ func normalize*(clr: ColorObj): ColorObj =
 
 func mix*(
     clr1, clr2: ColorObj,
-    fraction: 0f..1f = clr2.a
+    fraction: float = -1f
 ): ColorObj =
   ## Mixes two colors
+  let f = if fraction == -1f: clr2.a else: fraction
   let
-    r = (clr2.r - clr1.r) * fraction + clr1.r
-    g = (clr2.g - clr1.g) * fraction + clr1.g
-    b = (clr2.b - clr1.b) * fraction + clr1.b
-    a = (clr2.a - clr1.a) * fraction + clr1.a
+    r = (clr2.r - clr1.r) * f + clr1.r
+    g = (clr2.g - clr1.g) * f + clr1.g
+    b = (clr2.b - clr1.b) * f + clr1.b
+    a = (clr2.a - clr1.a) * f + clr1.a
   clr(r, g, b, a)
 
 func max*(clr1, clr2: ColorObj): ColorObj =
@@ -64,6 +65,15 @@ func abs*(clr: ColorObj): ColorObj =
 func sqrt*(clr: ColorObj): ColorObj =
   ## Returns positivie color.
   clr(sqrt(clr.r), sqrt(clr.g), sqrt(clr.b), sqrt(clr.a))
+
+func round*(clr: ColorObj, place: int): ColorObj =
+  ## Rounds the color object.
+  clr(
+    round(clr.r, place),
+    round(clr.g, place),
+    round(clr.b, place),
+    round(clr.a, place)
+  )
 
 func pow*(clr: ColorObj, power: float): ColorObj =
   ## Returns positivie color.

@@ -59,6 +59,11 @@ suite "Working with colors":
   test "lighten only blend":
     assert blend(clr1, clr2, bmLightenOnly) == clr(1f, 1f, 1f, 1f)
 
+  test "HSV":
+    let rgb = clr(100, 150, 200).round(3)
+    assert rgb2hsv(rgb) == hsv(210f, 0.5, 0.784)
+    assert hsv2rgb(rgb2hsv(rgb)).round(3) == rgb
+
   test "mono":
     echo clr1.mono()
     echo clr2.mono()

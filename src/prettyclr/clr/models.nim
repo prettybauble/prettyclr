@@ -2,11 +2,7 @@
 #[
 ### `models.nim` provides working with different color models.
 ]#
-import
-  ../core/enums,
-  basic,
-  types,
-  math
+import types
 
 
 {.push inline.}
@@ -44,6 +40,7 @@ func rgb2hsv*(clr: ColorObj): ColorHsv =
 func hsv2rgb*(clr: ColorHsv): ColorObj =
   var
     hh, p, q, t, ff: float
+  result.a = 1f
 
   if clr.s <= 0f:
       result.r = clr.v
