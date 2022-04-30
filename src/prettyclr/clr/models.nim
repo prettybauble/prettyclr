@@ -13,6 +13,7 @@ func hsv*(clr: ColorObj): ColorHsv =
     delta = mx - mn
 
   result.v = mx
+  result.a = clr.a
 
   if delta < 0.00001:
       result.s = 0
@@ -37,10 +38,19 @@ func hsv*(clr: ColorObj): ColorHsv =
       result.h += 360f
 
 
+func rgb*(color: Color255): ColorObj =
+  clr(
+    color.r,
+    color.g,
+    color.b,
+    color.a
+  )
+
+
 func rgb*(clr: ColorHsv): ColorObj =
   var
     hh, p, q, t, ff: float
-  result.a = 1f
+  result.a = clr.a
 
   if clr.s <= 0f:
       result.r = clr.v

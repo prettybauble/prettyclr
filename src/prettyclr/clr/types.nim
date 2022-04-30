@@ -5,7 +5,9 @@ type
   ColorObj* = object
     r*, g*, b*, a*: float
   ColorHsv* = object
-    h*, s*, v*: float
+    h*, s*, v*, a*: float
+  Color255* = object
+    r*, g*, b*, a*: uint8
 
 
 {.push inline.}
@@ -40,21 +42,27 @@ func clr*(r, g, b: uint8, a: uint8 = 255u8): ColorObj =
     int(a) / 255
   )
 
+func clr*(rgba: Color255): ColorObj =
+  clr(rgba.r, rgba.g, rgba.b, rgba.a)
+
 func clr*(r, g, b: float, a: float = 1f): ColorObj =
   #[ Initializes the color object
      with RGBA values in 0..1 range ]#
   initColor(r, g, b, a)
 
 func hsv*(
-    h: float = 0,
-    s: float = 0,
-    v: float = 0
+    h, s, v, a: float = 0
 ): ColorHsv =
   #[Initializes HSL color model
   See https://en.wikipedia.org/wiki/HSL_and_HSV
   
   `kind` param can be also `hmLarger` (HSV), `hmLuma` (HSY), `hmIntensity` (HSI).
   ]#
-  ColorHsv(h: h, s: s, v: v)
+  ColorHsv(h: h, s: s, v: v, a: a)
+
+func rgb*(
+  r, g, b, a: uint8 = 255u8
+): Color255 =
+  Color255(r: r, g: g, b: b, a: a)
 
 {.pop.}
