@@ -88,3 +88,7 @@ suite "Working with colors":
     echo hsv.analogous()
     echo hsv.tetradic()
     echo hsv.square()
+
+  test "walk colors":
+    for color in walk(clr(1f, 0f, 1f), clr(0.5f, 0.25f, 0.95f), 5):
+      echo color

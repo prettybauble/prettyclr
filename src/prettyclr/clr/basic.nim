@@ -19,6 +19,8 @@ func norm(
   else:
     v
 
+
+# ---=== Math ===--- #
 func normalize*(clr: ColorObj): ColorObj =
   ## Normalizes Color object.
   result = clr
@@ -84,6 +86,8 @@ func pow*(clr: ColorObj, power: float): ColorObj =
     pow(clr.a, power)
   )
 
+
+# ---=== Color functions ===--- #
 func bright*(
     clr: ColorObj,
     include_alpha: bool = false
@@ -113,6 +117,8 @@ func invert*(clr: ColorObj): ColorObj =
     abs(1f - clr.a)
   )
 
+
+# ---=== HSV === --- #
 func rotate*(clr: ColorHsv, value: float): ColorHsv =
   ## Rotates hue color
   var hue = clr.h + value
@@ -141,7 +147,7 @@ func square*(clr: ColorHsv): array[3, ColorHsv] =
   [clr.rotate(90), clr.rotate(180), clr.rotate(270)]
 
 
-# ---- Operators ---- #
+# ---=== Operators === --- #
 func `==`*(clr1, clr2: ColorObj): bool =
   clr1.r == clr2.r and clr1.g == clr2.g and
     clr1.b == clr2.b and clr1.a == clr2.a
@@ -262,13 +268,11 @@ func blend*(
 {.pop.}
 
 
-iterator walk(
+iterator walk*(
     clr1, clr2: ColorObj,
     step_count: int = 100
 ): ColorObj {.used.} =
   ## Goes from one color to another
-  var color = clr1
-  let step = (clr2 - clr1) / cast[float](step_count)
-  for i in 0..step_count:
-    color = color + step
-    yield color
+  let step = (clr2 - clr1) / step_count.float()
+  for i in 1..step_count:
+    yield clr1 + step*i.float()
