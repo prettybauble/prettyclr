@@ -99,7 +99,10 @@ function main() {
   r*, g*, b*, a*: float">ColorObj</a></li>
   <li><a class="reference" href="#ColorHsv"
     title="ColorHsv = object
-  h*, s*, v*: float">ColorHsv</a></li>
+  h*, s*, v*, a*: float">ColorHsv</a></li>
+  <li><a class="reference" href="#Color255"
+    title="Color255 = object
+  r*, g*, b*, a*: uint8">Color255</a></li>
 
   </ul>
 </li>
@@ -107,8 +110,8 @@ function main() {
   <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">hsv
-      <li><a class="reference" href="#hsv%2Cfloat%2Cfloat%2Cfloat"
-    title="hsv(h: float = 0; s: float = 0; v: float = 0): ColorHsv">hsv,<wbr>float,<wbr>float,<wbr>float</a></li>
+      <li><a class="reference" href="#hsv%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
+    title="hsv(h, s, v, a: float = 0): ColorHsv">hsv,<wbr>float,<wbr>float,<wbr>float,<wbr>float</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">clr
@@ -118,6 +121,8 @@ function main() {
     title="clr(v: float; a: float = 1.0&apos;f32): ColorObj">clr,<wbr>float,<wbr>float</a></li>
   <li><a class="reference" href="#clr%2Cuint8%2Cuint8%2Cuint8%2Cuint8"
     title="clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj">clr,<wbr>uint8,<wbr>uint8,<wbr>uint8,<wbr>uint8</a></li>
+  <li><a class="reference" href="#clr%2CColor255"
+    title="clr(rgba: Color255): ColorObj">clr,<wbr>Color255</a></li>
   <li><a class="reference" href="#clr%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
     title="clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj">clr,<wbr>float,<wbr>float,<wbr>float,<wbr>float</a></li>
 
@@ -129,6 +134,11 @@ function main() {
     title="initColor(r, g, b: float): ColorObj">initColor,<wbr>float,<wbr>float,<wbr>float</a></li>
   <li><a class="reference" href="#initColor%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
     title="initColor(r, g, b, a: float): ColorObj">initColor,<wbr>float,<wbr>float,<wbr>float,<wbr>float</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">rgb
+      <li><a class="reference" href="#rgb%2Cuint8%2Cuint8%2Cuint8%2Cuint8"
+    title="rgb(r, g, b, a: uint8 = 255&apos;u8): Color255">rgb,<wbr>uint8,<wbr>uint8,<wbr>uint8,<wbr>uint8</a></li>
 
   </ul>
 
@@ -156,7 +166,16 @@ function main() {
 </dd>
 <a id="ColorHsv"></a>
 <dt><pre><a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">h</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">s</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">v</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
+  <span class="Identifier">h</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">s</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">v</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Color255"></a>
+<dt><pre><a href="types.html#Color255"><span class="Identifier">Color255</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">r</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">g</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint8</span>
 </pre></dt>
 <dd>
 
@@ -211,6 +230,13 @@ Creates grayscale color
 
 
 </dd>
+<a id="clr,Color255"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#clr%2CColor255"><span class="Identifier">clr</span></a><span class="Other">(</span><span class="Identifier">rgba</span><span class="Other">:</span> <a href="types.html#Color255"><span class="Identifier">Color255</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="clr,float,float,float,float"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#clr%2Cfloat%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">clr</span></a><span class="Other">(</span><span class="Identifier">r</span><span class="Other">,</span> <span class="Identifier">g</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="FloatNumber">1.0'f32</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
@@ -219,9 +245,15 @@ Creates grayscale color
 
 
 </dd>
-<a id="hsv,float,float,float"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#hsv%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">hsv</span></a><span class="Other">(</span><span class="Identifier">h</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="hsv,float,float,float,float"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#hsv%2Cfloat%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">hsv</span></a><span class="Other">(</span><span class="Identifier">h</span><span class="Other">,</span> <span class="Identifier">s</span><span class="Other">,</span> <span class="Identifier">v</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorHsv"><span class="Identifier">ColorHsv</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="rgb,uint8,uint8,uint8,uint8"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#rgb%2Cuint8%2Cuint8%2Cuint8%2Cuint8"><span class="Identifier">rgb</span></a><span class="Other">(</span><span class="Identifier">r</span><span class="Other">,</span> <span class="Identifier">g</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">uint8</span> <span class="Other">=</span> <span class="DecNumber">255'u8</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#Color255"><span class="Identifier">Color255</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -237,7 +269,7 @@ Creates grayscale color
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 08:40:09 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 08:56:45 UTC</small>
       </div>
     </div>
   </div>

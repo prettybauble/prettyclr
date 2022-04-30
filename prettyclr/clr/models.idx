@@ -1,2 +1,3 @@
 hsv	prettyclr/clr/models.html#hsv,ColorObj	models: hsv(clr: ColorObj): ColorHsv	
+rgb	prettyclr/clr/models.html#rgb,Color255	models: rgb(color: Color255): ColorObj	
 rgb	prettyclr/clr/models.html#rgb,ColorHsv	models: rgb(clr: ColorHsv): ColorObj	
