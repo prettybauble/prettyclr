@@ -36,3 +36,4 @@ square	prettyclr/clr/basic.html#square,ColorHsv	basic: square(clr: ColorHsv): ar
 `$`	prettyclr/clr/basic.html#$,ColorObj	basic: `$`(clr: ColorObj): string	
 `$`	prettyclr/clr/basic.html#$,ColorHsv	basic: `$`(clr: ColorHsv): string	
 blend	prettyclr/clr/basic.html#blend,ColorObj,ColorObj,BlendMode	basic: blend(clr1, clr2: ColorObj; mode: BlendMode = bmNormal): ColorObj	
+walk	prettyclr/clr/basic.html#walk.i,ColorObj,ColorObj,int	basic: walk(clr1, clr2: ColorObj; step_count: int = 100): ColorObj	
