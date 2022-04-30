@@ -38,6 +38,15 @@ func hsv*(clr: ColorObj): ColorHsv =
       result.h += 360f
 
 
+func rgb255*(color: ColorObj): Color255 =
+  clr(
+    int(color.r) / 255,
+    int(color.g) / 255,
+    int(color.b) / 255,
+    int(color.a) / 255
+  )
+
+
 func rgb*(color: Color255): ColorObj =
   clr(
     color.r,

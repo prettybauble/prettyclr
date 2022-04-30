@@ -42,7 +42,7 @@ func clr*(r, g, b: uint8, a: uint8 = 255u8): ColorObj =
     int(a) / 255
   )
 
-func rgb*(rgba: Color255): ColorObj =
+func clr*(rgba: Color255): ColorObj =
   clr(rgba.r, rgba.g, rgba.b, rgba.a)
 
 func clr*(r, g, b: float, a: float = 1f): ColorObj =
