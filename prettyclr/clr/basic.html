@@ -290,12 +290,11 @@ function main() {
 <div class="section" id="13">
 <h1><a class="toc-backref" href="#13">Funcs</a></h1>
 <dl class="item">
-<a id="normalize,ColorObj"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#normalize%2CColorObj"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="abs,ColorObj"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#abs%2CColorObj"><span class="Identifier">abs</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Normalizes Color object.
+Returns positivie color.
 
 </dd>
 <a id="mix,ColorObj,ColorObj,float"></a>
@@ -322,18 +321,12 @@ Returns maximum color between <tt class="docutils literal"><span class="pre">clr
 Returns minimal color between <tt class="docutils literal"><span class="pre">clr1</span></tt> and <tt class="docutils literal"><span class="pre">clr2</span></tt>.
 
 </dd>
-<a id="abs,ColorObj"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#abs%2CColorObj"><span class="Identifier">abs</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="normalize,ColorObj"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#normalize%2CColorObj"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Returns positivie color.
-
-</dd>
-<a id="sqrt,ColorObj"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#sqrt%2CColorObj"><span class="Identifier">sqrt</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-Returns positivie color.
+Normalizes Color object.
 
 </dd>
 <a id="round,ColorObj,int"></a>
@@ -347,6 +340,13 @@ Rounds the color object.
 <a id="pow,ColorObj,float"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#pow%2CColorObj%2Cfloat"><span class="Identifier">pow</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">;</span> <span class="Identifier">power</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns positivie color.
+
+</dd>
+<a id="sqrt,ColorObj"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#sqrt%2CColorObj"><span class="Identifier">sqrt</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns positivie color.
@@ -368,18 +368,18 @@ Returns color bright
 Returns color divided by 3
 
 </dd>
-<a id="mono,ColorObj"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#mono%2CColorObj"><span class="Identifier">mono</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-Returns color divided by 3
-
-</dd>
 <a id="invert,ColorObj"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#invert%2CColorObj"><span class="Identifier">invert</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns inverted color
+
+</dd>
+<a id="mono,ColorObj"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#mono%2CColorObj"><span class="Identifier">mono</span></a><span class="Other">(</span><span class="Identifier">clr</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns color divided by 3
 
 </dd>
 <a id="rotate,ColorHsv,float"></a>
@@ -583,7 +583,7 @@ Returns square colors
     <span class="Identifier">discardable</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Blends two colors.
+
 
 </dd>
 
@@ -609,7 +609,7 @@ Goes from one color to another
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 03:10:31 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 08:40:10 UTC</small>
       </div>
     </div>
   </div>

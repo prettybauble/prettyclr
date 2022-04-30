@@ -1,15 +1,15 @@
-normalize	prettyclr/clr/basic.html#normalize,ColorObj	basic: normalize(clr: ColorObj): ColorObj	
+abs	prettyclr/clr/basic.html#abs,ColorObj	basic: abs(clr: ColorObj): ColorObj	
 mix	prettyclr/clr/basic.html#mix,ColorObj,ColorObj,float	basic: mix(clr1, clr2: ColorObj; fraction: float = -1.0&apos;f32): ColorObj	
 max	prettyclr/clr/basic.html#max,ColorObj,ColorObj	basic: max(clr1, clr2: ColorObj): ColorObj	
 min	prettyclr/clr/basic.html#min,ColorObj,ColorObj	basic: min(clr1, clr2: ColorObj): ColorObj	
-abs	prettyclr/clr/basic.html#abs,ColorObj	basic: abs(clr: ColorObj): ColorObj	
-sqrt	prettyclr/clr/basic.html#sqrt,ColorObj	basic: sqrt(clr: ColorObj): ColorObj	
+normalize	prettyclr/clr/basic.html#normalize,ColorObj	basic: normalize(clr: ColorObj): ColorObj	
 round	prettyclr/clr/basic.html#round,ColorObj,int	basic: round(clr: ColorObj; place: int): ColorObj	
 pow	prettyclr/clr/basic.html#pow,ColorObj,float	basic: pow(clr: ColorObj; power: float): ColorObj	
+sqrt	prettyclr/clr/basic.html#sqrt,ColorObj	basic: sqrt(clr: ColorObj): ColorObj	
 bright	prettyclr/clr/basic.html#bright,ColorObj,bool	basic: bright(clr: ColorObj; include_alpha: bool = false): float	
 grayscale	prettyclr/clr/basic.html#grayscale,ColorObj	basic: grayscale(clr: ColorObj): ColorObj	
-mono	prettyclr/clr/basic.html#mono,ColorObj	basic: mono(clr: ColorObj): ColorObj	
 invert	prettyclr/clr/basic.html#invert,ColorObj	basic: invert(clr: ColorObj): ColorObj	
+mono	prettyclr/clr/basic.html#mono,ColorObj	basic: mono(clr: ColorObj): ColorObj	
 rotate	prettyclr/clr/basic.html#rotate,ColorHsv,float	basic: rotate(clr: ColorHsv; value: float): ColorHsv	
 complementary	prettyclr/clr/basic.html#complementary,ColorHsv	basic: complementary(clr: ColorHsv): ColorHsv	
 triad	prettyclr/clr/basic.html#triad,ColorHsv	basic: triad(clr: ColorHsv): array[2, ColorHsv]	
