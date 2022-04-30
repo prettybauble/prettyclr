@@ -121,8 +121,6 @@ function main() {
     title="clr(v: float; a: float = 1.0&apos;f32): ColorObj">clr,<wbr>float,<wbr>float</a></li>
   <li><a class="reference" href="#clr%2Cuint8%2Cuint8%2Cuint8%2Cuint8"
     title="clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj">clr,<wbr>uint8,<wbr>uint8,<wbr>uint8,<wbr>uint8</a></li>
-  <li><a class="reference" href="#clr%2CColor255"
-    title="clr(rgba: Color255): ColorObj">clr,<wbr>Color255</a></li>
   <li><a class="reference" href="#clr%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
     title="clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj">clr,<wbr>float,<wbr>float,<wbr>float,<wbr>float</a></li>
 
@@ -137,7 +135,9 @@ function main() {
 
   </ul>
   <ul class="simple nested-toc-section">rgb
-      <li><a class="reference" href="#rgb%2Cuint8%2Cuint8%2Cuint8%2Cuint8"
+      <li><a class="reference" href="#rgb%2CColor255"
+    title="rgb(rgba: Color255): ColorObj">rgb,<wbr>Color255</a></li>
+  <li><a class="reference" href="#rgb%2Cuint8%2Cuint8%2Cuint8%2Cuint8"
     title="rgb(r, g, b, a: uint8 = 255&apos;u8): Color255">rgb,<wbr>uint8,<wbr>uint8,<wbr>uint8,<wbr>uint8</a></li>
 
   </ul>
@@ -230,8 +230,8 @@ Creates grayscale color
 
 
 </dd>
-<a id="clr,Color255"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#clr%2CColor255"><span class="Identifier">clr</span></a><span class="Other">(</span><span class="Identifier">rgba</span><span class="Other">:</span> <a href="types.html#Color255"><span class="Identifier">Color255</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="rgb,Color255"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#rgb%2CColor255"><span class="Identifier">rgb</span></a><span class="Other">(</span><span class="Identifier">rgba</span><span class="Other">:</span> <a href="types.html#Color255"><span class="Identifier">Color255</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#ColorObj"><span class="Identifier">ColorObj</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -269,7 +269,7 @@ Creates grayscale color
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 08:56:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-04-30 08:58:01 UTC</small>
       </div>
     </div>
   </div>

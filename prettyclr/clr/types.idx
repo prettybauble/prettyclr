@@ -7,7 +7,7 @@ initColor	prettyclr/clr/types.html#initColor,float,float,float,float	types: init
 clr	prettyclr/clr/types.html#clr	types: clr(): ColorObj	
 clr	prettyclr/clr/types.html#clr,float,float	types: clr(v: float; a: float = 1.0&apos;f32): ColorObj	
 clr	prettyclr/clr/types.html#clr,uint8,uint8,uint8,uint8	types: clr(r, g, b: uint8; a: uint8 = 255&apos;u8): ColorObj	
-clr	prettyclr/clr/types.html#clr,Color255	types: clr(rgba: Color255): ColorObj	
+rgb	prettyclr/clr/types.html#rgb,Color255	types: rgb(rgba: Color255): ColorObj	
 clr	prettyclr/clr/types.html#clr,float,float,float,float	types: clr(r, g, b: float; a: float = 1.0&apos;f32): ColorObj	
 hsv	prettyclr/clr/types.html#hsv,float,float,float,float	types: hsv(h, s, v, a: float = 0): ColorHsv	
 rgb	prettyclr/clr/types.html#rgb,uint8,uint8,uint8,uint8	types: rgb(r, g, b, a: uint8 = 255&apos;u8): Color255	
