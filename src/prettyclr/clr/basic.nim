@@ -98,45 +98,6 @@ func sqrt*(clr: ColorObj): ColorObj =
 
 
 # ---=== Color functions ===--- #
-func blend*(
-    clr1, clr2: ColorObj,
-    mode: BlendMode = bmNormal
-): ColorObj =
-  #[ Blends two colors.
-     `clr1` and `clr2` is color objects.
-     `mode` blend mode]#
-  case mode
-  of bmNormal:
-    mix(clr1, clr2)
-  of bmMultiply:
-    normalize(clr1*clr2)
-  of bmAddition:
-    normalize(clr1+clr2)
-  of bmSubtract:
-    normalize(clr1-clr2)
-  of bmDivide:
-    normalize(clr1/clr2)
-  of bmDifference:
-    abs(clr1-clr2)
-  of bmDarkenOnly:
-    min(clr1,clr2)
-  of bmLightenOnly:
-    max(clr1,clr2)
-  of bmScreen:
-    1f - (1f - clr1)*(1f - clr2)
-  of bmHardLight:
-    (clr1*clr2) * (1f - (1f - clr1)*(1f - clr2))
-  of bmOverlay:
-    if bright(clr1) < 0.5:
-      2f*clr1*clr2
-    else:
-      1f - 2f*(1f - clr1)*(1f - clr2)
-  of bmSoftLight:
-    if bright(clr1) < 0.5:
-      normalize(2f*clr1*clr2 + pow(clr1, 2f)*(1f - 2f*clr2))
-    else:
-      normalize(2f*clr1*(1f - clr2) + sqrt(clr1)*(2f*clr2 - 1f))
-
 func bright*(
     clr: ColorObj,
     include_alpha: bool = false
@@ -276,6 +237,46 @@ func `$`*(clr: ColorObj): string =
 
 func `$`*(clr: ColorHsv): string =
   fmt"HSV Color<[{clr.h}, {clr.s}, {clr.v}]>"
+
+
+func blend*(
+    clr1, clr2: ColorObj,
+    mode: BlendMode = bmNormal
+): ColorObj =
+  #[ Blends two colors.
+     `clr1` and `clr2` is color objects.
+     `mode` blend mode]#
+  case mode
+  of bmNormal:
+    mix(clr1, clr2)
+  of bmMultiply:
+    normalize(clr1*clr2)
+  of bmAddition:
+    normalize(clr1+clr2)
+  of bmSubtract:
+    normalize(clr1-clr2)
+  of bmDivide:
+    normalize(clr1/clr2)
+  of bmDifference:
+    abs(clr1-clr2)
+  of bmDarkenOnly:
+    min(clr1,clr2)
+  of bmLightenOnly:
+    max(clr1,clr2)
+  of bmScreen:
+    1f - (1f - clr1)*(1f - clr2)
+  of bmHardLight:
+    (clr1*clr2) * (1f - (1f - clr1)*(1f - clr2))
+  of bmOverlay:
+    if bright(clr1) < 0.5:
+      2f*clr1*clr2
+    else:
+      1f - 2f*(1f - clr1)*(1f - clr2)
+  of bmSoftLight:
+    if bright(clr1) < 0.5:
+      normalize(2f*clr1*clr2 + pow(clr1, 2f)*(1f - 2f*clr2))
+    else:
+      normalize(2f*clr1*(1f - clr2) + sqrt(clr1)*(2f*clr2 - 1f))
 {.pop.}
 
 
